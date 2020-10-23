@@ -1,0 +1,16 @@
+@font-face {
+  font-family: 'Apercu-Mono-Pro';
+  src: local('Apercu Mono Pro'), local('Apercu-Mono-Pro'),
+    url('./ApercuPro-Mono.woff') format('woff'),
+    url('./ApercuPro-Mono.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Apercu-Mono-Pro';
+  src: local('Apercu Mono Pro'), local('Apercu-Mono-Pro'),
+    url('./ApercuMonoPro-Bold.woff') format('woff'),
+    url('./ApercuMonoPro-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+}

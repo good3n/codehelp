@@ -1,0 +1,14 @@
+:root {
+  --bg-color: #202225;
+  --color-ch-green: #4fd8c3;
+  --color-ch-purple: #5e7ce7;
+}
+
+body {
+  font-family: 'Apercu-Mono-Pro';
+  background-color: var(--bg-color);
+  color: #fff;
+  font-size: 18px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
