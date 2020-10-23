@@ -9,7 +9,10 @@ import Css from '../components/Pages/Resources/Categories/Css'
 import JavaScript from '../components/Pages/Resources/Categories/JavaScript'
 import Php from '../components/Pages/Resources/Categories/Php'
 import ReactJs from '../components/Pages/Resources/Categories/ReactJs'
+import VueJs from '../components/Pages/Resources/Categories/VueJs'
 import WordPress from '../components/Pages/Resources/Categories/WordPress'
+import YouTube from '../components/Pages/Resources/Categories/YouTube'
+import Podcasts from '../components/Pages/Resources/Categories/Podcasts'
 
 const Grid = styled.div`
   display: grid;
@@ -60,7 +63,11 @@ const ResourcesPage = () => (
         <Php />
         <h2>Libraries &amp; Frameworks</h2>
         <ReactJs />
+        <VueJs />
         <WordPress />
+        <h2>Other</h2>
+        <YouTube />
+        <Podcasts />
       </div>
     </Grid>
   </Layout>

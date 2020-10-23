@@ -35,13 +35,29 @@ const ResourcesSidebar = () => (
       </li>
       <Heading>Libraries &amp; Frameworks</Heading>
       <li>
-        <AnchorLink to="/resources#reactjs" title="ReactJS">
-          ReactJS
+        <AnchorLink to="/resources#reactjs" title="React">
+          React
+        </AnchorLink>
+      </li>
+      <li>
+        <AnchorLink to="/resources#vuejs" title="Vue.js">
+          Vue.js
         </AnchorLink>
       </li>
       <li>
         <AnchorLink to="/resources#wordpress" title="WordPress">
           WordPress
+        </AnchorLink>
+      </li>
+      <Heading>Other</Heading>
+      <li>
+        <AnchorLink to="/resources#youtube" title="YouTube">
+          YouTube
+        </AnchorLink>
+      </li>
+      <li>
+        <AnchorLink to="/resources#podcasts" title="Podcasts">
+          Podcasts
         </AnchorLink>
       </li>
     </StickyBox>
