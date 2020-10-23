@@ -3,7 +3,7 @@ import { StyledFooter } from './Footer.styles'
 
 const Footer = () => (
   <StyledFooter>
-    © {new Date().getFullYear()} CodeHelp
+    <div>© {new Date().getFullYear()} CodeHelp Community</div>
     <div>
       Coded in{' '}
       <a
