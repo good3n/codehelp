@@ -10,23 +10,34 @@ export const StyledFooter = styled.footer`
     grid-template-columns: 1fr;
   }
 
-  div {
-    &:first-of-type {
-      font-size: 21px;
-    }
-
-    &:last-of-type {
-      text-align: right;
-      font-size: 16px;
-
-      @media (max-width: 991px) {
-        text-align: left;
-        margin-top: 20px;
-      }
-    }
+  p {
+    font-size: 21px;
+    margin: 0;
   }
 
   a {
-    color: var(--color-ch-green);
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    color: #fff;
+    text-decoration: none;
+
+    @media (max-width: 991px) {
+      margin: 20px 0 0;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  svg {
+    width: 24px;
+    margin-left: 12px;
+
+    path {
+      fill: var(--color-ch-green);
+    }
   }
 `
