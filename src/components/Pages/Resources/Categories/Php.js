@@ -7,9 +7,9 @@ const Php = () => (
       <span>#</span>PHP
     </h3>
     <Resource
-      name="Laravel"
-      desc="Laravel is a web application framework with expressive, elegant syntax."
-      link="https://laravel.com/"
+      name="Laravel Valet"
+      desc="Valet is a Laravel development environment for Mac minimalists. No Vagrant, no /etc/hosts file. You can even share your sites publicly using local tunnels."
+      link="https://laravel.com/docs/8.x/valet"
     />
   </div>
 )

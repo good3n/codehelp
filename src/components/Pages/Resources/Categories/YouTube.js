@@ -13,7 +13,7 @@ const YouTube = () => (
     />
     <Resource
       name="Traversy Media"
-      desc="Traversy Media features the best online web development and programming tutorials for all of the latest web technologies including Node.js, Angular 2, React.js, PHP, Rails, HTML, CSS and much more."
+      desc="Traversy Media features web development and programming tutorials for web technologies including Node.js, Angular 2, React.js, PHP, Rails, HTML, CSS and more."
       link="https://www.youtube.com/user/TechGuyWeb"
     />
   </div>
