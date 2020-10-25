@@ -51,6 +51,11 @@ const ResourcesSidebar = () => (
       </li>
       <Heading>Other</Heading>
       <li>
+        <AnchorLink to="/resources#design" title="Design">
+          Design
+        </AnchorLink>
+      </li>
+      <li>
         <AnchorLink to="/resources#youtube" title="YouTube">
           YouTube
         </AnchorLink>
