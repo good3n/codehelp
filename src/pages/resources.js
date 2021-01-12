@@ -11,6 +11,7 @@ import Php from '../components/Pages/Resources/Categories/Php'
 import ReactJs from '../components/Pages/Resources/Categories/ReactJs'
 import VueJs from '../components/Pages/Resources/Categories/VueJs'
 import WordPress from '../components/Pages/Resources/Categories/WordPress'
+import ComputerScience from '../components/Pages/Resources/Categories/ComputerScience'
 import Design from '../components/Pages/Resources/Categories/Design'
 import YouTube from '../components/Pages/Resources/Categories/YouTube'
 import Podcasts from '../components/Pages/Resources/Categories/Podcasts'
@@ -66,6 +67,8 @@ const ResourcesPage = () => (
         <ReactJs />
         <VueJs />
         <WordPress />
+        <h2>Expanding Knowledge</h2>
+        <ComputerScience />
         <h2>Other</h2>
         <Design />
         <YouTube />

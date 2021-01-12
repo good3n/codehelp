@@ -21,6 +21,16 @@ const ReactJs = () => (
       desc="Sticky Boxes with sensible behaviour if the content is bigger than the viewport."
       link="https://react-sticky-box.codecks.io/"
     />
+    <Resource
+      name="React Joyride"
+      desc="Create awesome tours for your app! Showcase your app to new users or explain functionality of new features."
+      link="https://github.com/gilbarbara/react-joyride"
+    />
+    <Resource
+      name="React Query"
+      desc="Fetch, cache and update data in your React and React Native applications all without touching any 'global state'."
+      link="https://react-query.tanstack.com/"
+    />
   </div>
 )
 

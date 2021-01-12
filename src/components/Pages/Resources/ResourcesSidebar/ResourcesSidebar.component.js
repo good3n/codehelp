@@ -49,6 +49,12 @@ const ResourcesSidebar = () => (
           WordPress
         </AnchorLink>
       </li>
+      <Heading>Expanding Knowledge</Heading>
+      <li>
+        <AnchorLink to="/resources#cs" title="Computer Science">
+          Computer Science
+        </AnchorLink>
+      </li>
       <Heading>Other</Heading>
       <li>
         <AnchorLink to="/resources#design" title="Design">
