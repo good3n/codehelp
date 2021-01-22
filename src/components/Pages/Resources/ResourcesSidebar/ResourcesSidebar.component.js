@@ -51,6 +51,11 @@ const ResourcesSidebar = () => (
       </li>
       <Heading>Expanding Knowledge</Heading>
       <li>
+        <AnchorLink to="/resources#websites-blogs" title="Websites &amp; Blogs">
+          Websites &amp; Blogs
+        </AnchorLink>
+      </li>
+      <li>
         <AnchorLink to="/resources#cs" title="Computer Science">
           Computer Science
         </AnchorLink>
