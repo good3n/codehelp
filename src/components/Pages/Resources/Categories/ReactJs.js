@@ -36,6 +36,11 @@ const ReactJs = () => (
       desc="A utility for converting HTML strings into React components."
       link="https://www.npmjs.com/package/react-html-parser"
     />
+    <Resource
+      name="React Number Format"
+      desc="https://www.npmjs.com/package/react-number-format"
+      link="https://www.npmjs.com/package/react-number-format"
+    />
   </div>
 )
 
