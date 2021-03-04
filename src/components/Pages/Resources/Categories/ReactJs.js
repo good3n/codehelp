@@ -31,6 +31,11 @@ const ReactJs = () => (
       desc="Fetch, cache and update data in your React and React Native applications all without touching any 'global state'."
       link="https://react-query.tanstack.com/"
     />
+    <Resource
+      name="React HTML Parser"
+      desc="A utility for converting HTML strings into React components."
+      link="https://www.npmjs.com/package/react-html-parser"
+    />
   </div>
 )
 
