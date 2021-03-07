@@ -5,18 +5,17 @@ export const StyledFooter = styled.footer`
   display: grid;
   grid-template-columns: 1fr 1.6fr;
   align-items: center;
+  font-size: 16px;
 
   @media (max-width: 991px) {
     grid-template-columns: 1fr;
   }
 
   p {
-    font-size: 21px;
     margin: 0;
   }
 
   a {
-    font-size: 16px;
     display: flex;
     align-items: center;
     margin-left: auto;
