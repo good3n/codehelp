@@ -1,0 +1,316 @@
+{
+  "resources": [
+    {
+      "label": {
+        "id": "guides-info",
+        "name": "General Guides & Information",
+        "categories": [
+          {
+            "category": {
+              "id": "web-development",
+              "name": "Web Development",
+              "resources": [
+                {
+                  "id": "developer-roadmaps",
+                  "name": "Developer Roadmaps",
+                  "description": "Step by step guides and paths to learn different tools or technologies.",
+                  "link": "https://roadmap.sh/"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": {
+        "id": "languages-markup",
+        "name": "Languages & Markup",
+        "categories": [
+          {
+            "category": {
+              "id": "html",
+              "name": "HTML/SVG",
+              "resources": [
+                {
+                  "id": "svgomg",
+                  "name": "SVGOMG",
+                  "description": "SVGOMG is SVGO's Missing GUI, aiming to expose the majority, if not all the configuration options of SVGO.",
+                  "link": "https://jakearchibald.github.io/svgomg/"
+                }
+              ]
+            }
+          },
+          {
+            "category": {
+              "id": "css",
+              "name": "CSS",
+              "resources": [
+                {
+                  "id": "sass",
+                  "name": "Sass",
+                  "description": "Sass is the most mature, stable, and powerful professional grade CSS extension language in the world.",
+                  "link": "https://sass-lang.com/"
+                },
+                {
+                  "id": "tailwindcss",
+                  "name": "Tailwind CSS",
+                  "description": "Tailwind CSS is a highly customizable, low-level CSS framework that gives you all of the building blocks you need to build bespoke designs without any annoying opinionated styles you have to fight to override.",
+                  "link": "https://tailwindcss.com/"
+                }
+              ]
+            }
+          },
+          {
+            "category": {
+              "id": "javascript",
+              "name": "JavaScript",
+              "resources": [
+                {
+                  "id": "es6-tour",
+                  "name": "A Quick Tour of ES6 (Or, The Bits You'll Actually Use)",
+                  "description": "ES6 has been getting a lot of press lately. And with all of the benefits that the new syntax and built-ins bring, it damn well should.",
+                  "link": "http://jamesknelson.com/es6-the-bits-youll-actually-use/"
+                },
+                {
+                  "id": "es6-overview",
+                  "name": "ES6 Overview in 350 Bullet Points",
+                  "description": "I heard you like bullet points, so I made an article containing hundreds of those bad boys.",
+                  "link": "https://ponyfoo.com/articles/es6"
+                },
+                {
+                  "id": "javascript30",
+                  "name": "JavaScript30",
+                  "description": "Build 30 things with vanilla JS in 30 days with 30 tutorials.",
+                  "link": "https://javascript30.com/"
+                }
+              ]
+            }
+          },
+          {
+            "category": {
+              "id": "php",
+              "name": "PHP",
+              "resources": [
+                {
+                  "id": "laravel-valet",
+                  "name": "Laravel Valet",
+                  "description": "Valet is a Laravel development environment for Mac minimalists. No Vagrant, no /etc/hosts file. You can even share your sites publicly using local tunnels.",
+                  "link": "https://laravel.com/docs/8.x/valet"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": {
+        "id": "libraries-frameworks",
+        "name": "Libraries & Frameworks",
+        "categories": [
+          {
+            "category": {
+              "id": "react",
+              "name": "React",
+              "resources": [
+                {
+                  "id": "gatsby",
+                  "name": "Gatsby",
+                  "description": "Gatsby is a React-based open source framework for creating websites and apps.",
+                  "link": "https://www.gatsbyjs.com/"
+                },
+                {
+                  "id": "nextjs",
+                  "name": "Next.js",
+                  "description": "Next.js gives you the best developer experience with all the features you need for production: hybrid static &amp; server rendering, TypeScript support, smart bundling, route pre-fetching, and more.",
+                  "link": "https://nextjs.org/"
+                },
+                {
+                  "id": "react-sticky-box",
+                  "name": "React Sticky Box",
+                  "description": "Sticky Boxes with sensible behaviour if the content is bigger than the viewport.",
+                  "link": "https://react-sticky-box.codecks.io/"
+                },
+                {
+                  "id": "react-joyride",
+                  "name": "React Joyride",
+                  "description": "Create awesome tours for your app! Showcase your app to new users or explain functionality of new features.",
+                  "link": "https://github.com/gilbarbara/react-joyride"
+                },
+                {
+                  "id": "react-query",
+                  "name": "React Query",
+                  "description": "Fetch, cache and update data in your React and React Native applications all without touching any 'global state'.",
+                  "link": "https://react-query.tanstack.com/"
+                },
+                {
+                  "id": "react-html-parser",
+                  "name": "React HTML Parser",
+                  "description": "A utility for converting HTML strings into React components.",
+                  "link": "https://www.npmjs.com/package/react-html-parser"
+                },
+                {
+                  "id": "react-number-format",
+                  "name": "React Number Format",
+                  "description": "React component to format number in an input or as a text.",
+                  "link": "https://www.npmjs.com/package/react-number-format"
+                }
+              ]
+            }
+          },
+          {
+            "category": {
+              "id": "vuejs",
+              "name": "Vue.js",
+              "resources": [
+                {
+                  "id": "nuxtjs",
+                  "name": "NuxtJS",
+                  "description": "Build your next Vue.js application with confidence using NuxtJS. An open source framework making web development simple and powerful.",
+                  "link": "https://nuxtjs.org/"
+                }
+              ]
+            }
+          },
+          {
+            "category": {
+              "id": "wordpress",
+              "name": "WordPress",
+              "resources": [
+                {
+                  "id": "advanced-custom-fields",
+                  "name": "Advanced Custom Fields",
+                  "description": "Use the Advanced Custom Fields plugin to take full control of your WordPress edit screens &amp; custom field data.",
+                  "link": "https://www.advancedcustomfields.com/"
+                },
+                {
+                  "id": "underscores",
+                  "name": "Underscores",
+                  "description": "Underscores is a starter theme designed to cut down many hours of development time when setting up a new custom theme.",
+                  "link": "https://underscores.me/"
+                },
+                {
+                  "id": "wordmove",
+                  "name": "Wordmove",
+                  "description": "Wordmove is a command line tool that lets you automatically mirror local WordPress installations and DB data back and forth from your local development machine to one or more remote servers.",
+                  "link": "https://github.com/welaika/wordmove"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": {
+        "id": "expanding-knowledge",
+        "name": "Expanding Knowledge",
+        "categories": [
+          {
+            "category": {
+              "id": "websites-blogs",
+              "name": "Websites & Blogs",
+              "resources": [
+                {
+                  "id": "devto",
+                  "name": "dev.to",
+                  "description": "A community of software developers getting together to help one another out.",
+                  "link": "https://dev.to/"
+                },
+                {
+                  "id": "uidev",
+                  "name": "ui.dev",
+                  "description": "Master the JavaScript Ecosystem",
+                  "link": "https://ui.dev/"
+                }
+              ]
+            }
+          },
+          {
+            "category": {
+              "id": "computer-science",
+              "name": "Computer Science",
+              "resources": [
+                {
+                  "id": "learn-css-1000-videos",
+                  "name": "Learn CS in 1000 Videos",
+                  "description": "An entire Computer Science curriculum using only YouTube videos.",
+                  "link": "https://laconicml.com/computer-science-curriculum-youtube-videos/"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": {
+        "id": "other",
+        "name": "Other",
+        "categories": [
+          {
+            "category": {
+              "id": "design",
+              "name": "Design",
+              "resources": [
+                {
+                  "id": "coolors",
+                  "name": "Coolors",
+                  "description": "Create the perfect palette or get inspired by thousands of beautiful color schemes.",
+                  "link": "https://coolors.co/"
+                },
+                {
+                  "id": "css-gradient",
+                  "name": "CSS Gradient",
+                  "description": "A happy little website and free tool that lets you create a gradient background for websites.",
+                  "link": "https://cssgradient.io/"
+                },
+                {
+                  "id": "happy-hues",
+                  "name": "Happy Hues",
+                  "description": "Happy Hues is a color palette inspiration site that acts as a real world example as to how the colors could be used in your design projects.",
+                  "link": "https://www.happyhues.co/"
+                }
+              ]
+            }
+          },
+          {
+            "category": {
+              "id": "youtube",
+              "name": "YouTube",
+              "resources": [
+                {
+                  "id": "freecodecamp",
+                  "name": "freeCodeCamp",
+                  "description": "Learn to code for free.",
+                  "link": "https://www.youtube.com/c/Freecodecamp/"
+                },
+                {
+                  "id": "traversy-media",
+                  "name": "Traversy Media",
+                  "description": "Traversy Media features web development and programming tutorials for web technologies including Node.js, Angular 2, React.js, PHP, Rails, HTML, CSS and more.",
+                  "link": "https://www.youtube.com/user/TechGuyWeb"
+                }
+              ]
+            }
+          },
+          {
+            "category": {
+              "id": "podcasts",
+              "name": "Podcasts",
+              "resources": [
+                {
+                  "id": "syntax",
+                  "name": "Syntax",
+                  "description": "A Tasty Treats Podcast for Web Developers.",
+                  "link": "https://syntax.fm/"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

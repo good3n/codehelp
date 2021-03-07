@@ -2,20 +2,9 @@ import React from 'react'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import styled from 'styled-components'
-import { ResourcesSidebar } from '../components/Pages/Resources/ResourcesSidebar'
-import GuidesInformation from '../components/Pages/Resources/Categories/WebDevelopment'
-import Html from '../components/Pages/Resources/Categories/Html'
-import Css from '../components/Pages/Resources/Categories/Css'
-import JavaScript from '../components/Pages/Resources/Categories/JavaScript'
-import Php from '../components/Pages/Resources/Categories/Php'
-import ReactJs from '../components/Pages/Resources/Categories/ReactJs'
-import VueJs from '../components/Pages/Resources/Categories/VueJs'
-import WordPress from '../components/Pages/Resources/Categories/WordPress'
-import WebsitesBlogs from '../components/Pages/Resources/Categories/WebsitesBlogs'
-import ComputerScience from '../components/Pages/Resources/Categories/ComputerScience'
-import Design from '../components/Pages/Resources/Categories/Design'
-import YouTube from '../components/Pages/Resources/Categories/YouTube'
-import Podcasts from '../components/Pages/Resources/Categories/Podcasts'
+import Resources from '../data/resources.json'
+import { ResourcesSidebar } from '../components/ResourcesSidebar'
+import { Resource } from '../components/Resource'
 
 const Grid = styled.div`
   display: grid;
@@ -26,14 +15,14 @@ const Grid = styled.div`
     grid-template-columns: 1fr;
   }
 
+  .label:not(:first-of-type) {
+    margin-top: 100px;
+  }
+
   h2 {
     margin-bottom: 0;
     padding-bottom: 30px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-
-    &:not(:first-of-type) {
-      margin-top: 100px;
-    }
   }
 
   h3 {
@@ -51,33 +40,47 @@ const Grid = styled.div`
   }
 `
 
-const ResourcesPage = () => (
-  <Layout>
-    <SEO title="Resources" />
-    <Grid>
-      <ResourcesSidebar />
-      <div id="resource-list">
-        <h2>General Guides &amp; Information</h2>
-        <GuidesInformation />
-        <h2>Languages &amp; Markup</h2>
-        <Html />
-        <Css />
-        <JavaScript />
-        <Php />
-        <h2>Libraries &amp; Frameworks</h2>
-        <ReactJs />
-        <VueJs />
-        <WordPress />
-        <h2>Expanding Knowledge</h2>
-        <WebsitesBlogs />
-        <ComputerScience />
-        <h2>Other</h2>
-        <Design />
-        <YouTube />
-        <Podcasts />
-      </div>
-    </Grid>
-  </Layout>
-)
+const ResourcesPage = () => {
+  const { resources } = Resources
+  return (
+    <Layout>
+      <SEO title="Resources" />
+      <Grid>
+        <ResourcesSidebar />
+        <div>
+          {resources.map(({ label }) => {
+            return (
+              <div key={label.id} className="label">
+                <h2>{label.name}</h2>
+                {label.categories.map(({ category }) => {
+                  return (
+                    <div id={category.id}>
+                      <h3>
+                        <span>#</span>
+                        {category.name}
+                      </h3>
+                      {category.resources.map(
+                        ({ id, name, description, link }) => {
+                          return (
+                            <Resource
+                              id={id}
+                              name={name}
+                              desc={description}
+                              link={link}
+                            />
+                          )
+                        }
+                      )}
+                    </div>
+                  )
+                })}
+              </div>
+            )
+          })}
+        </div>
+      </Grid>
+    </Layout>
+  )
+}
 
 export default ResourcesPage
