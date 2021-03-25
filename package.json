@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "codehelp",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "description": "CodeHelp website",
+  "version": "1.0",
+  "author": "Tom Gooden @good3n>",
   "dependencies": {
     "babel-plugin-styled-components": "^1.11.1",
     "gatsby": "^2.24.79",
