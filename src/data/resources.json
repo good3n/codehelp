@@ -191,6 +191,12 @@
                   "link": "https://underscores.me/"
                 },
                 {
+                  "id": "local",
+                  "name": "Local",
+                  "description": "Local makes creating a local WordPress site a total breeze, so you don’t have to bother with setting it up yourself.",
+                  "link": "https://localwp.com/"
+                },
+                {
                   "id": "wordmove",
                   "name": "Wordmove",
                   "description": "Wordmove is a command line tool that lets you automatically mirror local WordPress installations and DB data back and forth from your local development machine to one or more remote servers.",
