@@ -277,6 +277,12 @@
                   "name": "Happy Hues",
                   "description": "Happy Hues is a color palette inspiration site that acts as a real world example as to how the colors could be used in your design projects.",
                   "link": "https://www.happyhues.co/"
+                },
+                {
+                  "id": "bgjar",
+                  "name": "BGJar",
+                  "description": "Free svg background generator for your websites, blogs and app.",
+                  "link": "https://bgjar.com/"
                 }
               ]
             }
