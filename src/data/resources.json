@@ -320,6 +320,20 @@
                 }
               ]
             }
+          },
+          {
+            "category": {
+              "id": "misc",
+              "name": "Miscellaneous",
+              "resources": [
+                {
+                  "id": "dracula",
+                  "name": "Dracula Theme",
+                  "description": "A dark theme for hundreds of applications.",
+                  "link": "https://draculatheme.com/"
+                }
+              ]
+            }
           }
         ]
       }
