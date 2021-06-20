@@ -201,6 +201,12 @@
                   "name": "Wordmove",
                   "description": "Wordmove is a command line tool that lets you automatically mirror local WordPress installations and DB data back and forth from your local development machine to one or more remote servers.",
                   "link": "https://github.com/welaika/wordmove"
+                },
+                {
+                  "id": "wpgraphql",
+                  "name": "WPGraphQL",
+                  "description": "WPGraphQL is a free, open-source WordPress plugin that provides an extendable GraphQL schema and API for any WordPress site.",
+                  "link": "https://www.wpgraphql.com/"
                 }
               ]
             }
