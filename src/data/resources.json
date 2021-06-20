@@ -295,6 +295,20 @@
           },
           {
             "category": {
+              "id": "typography",
+              "name": "Typography",
+              "resources": [
+                {
+                  "id": "typescale",
+                  "name": "Type Scale",
+                  "description": "Preview and choose the right type scale for your project. Experiment with font size, scale and different webfonts.",
+                  "link": "https://type-scale.com/"
+                }
+              ]
+            }
+          },
+          {
+            "category": {
               "id": "youtube",
               "name": "YouTube",
               "resources": [
