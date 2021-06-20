@@ -2,7 +2,7 @@
   "name": "codehelp",
   "private": true,
   "description": "CodeHelp website",
-  "version": "1.0",
+  "version": "1.0.0",
   "author": "Tom Gooden @good3n",
   "dependencies": {
     "babel-plugin-styled-components": "^1.12.0",
