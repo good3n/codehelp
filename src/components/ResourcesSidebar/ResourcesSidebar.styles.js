@@ -8,7 +8,7 @@ export const Sidebar = styled.aside`
 
   li {
     display: block;
-    margin: 0 0 10px;
+    margin: 0 0 0.64rem;
   }
 
   a {
@@ -19,5 +19,5 @@ export const Sidebar = styled.aside`
 
 export const Heading = styled.li`
   font-weight: 600;
-  margin: 30px 0 15px !important;
+  margin: var(--h4) 0 0.8rem !important;
 `

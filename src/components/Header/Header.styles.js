@@ -2,12 +2,12 @@ import styled from 'styled-components'
 import Popup from 'reactjs-popup'
 
 export const StyledHeader = styled.header`
-  padding: 100px 0 50px;
+  padding: 4.768rem 0 50px;
   display: flex;
   align-items: center;
 
   @media (max-width: 991px) {
-    padding: 50px 0;
+    padding: var(--h2) 0;
   }
 
   a {
@@ -69,7 +69,7 @@ export const StyledPopup = styled(Popup)`
   &-content {
     background: var(--bg-color);
     border-radius: 10px;
-    padding: 40px;
+    padding: var(--h3);
     font-size: 1rem;
 
     p {
@@ -77,7 +77,7 @@ export const StyledPopup = styled(Popup)`
       font-weight: bold;
 
       + div {
-        margin-top: 20px;
+        margin-top: 1rem;
         display: flex;
 
         a {

@@ -16,7 +16,7 @@ const Grid = styled.div`
   }
 
   .label:not(:first-of-type) {
-    margin-top: 100px;
+    margin-top: 4.768rem;
   }
 
   h2 {

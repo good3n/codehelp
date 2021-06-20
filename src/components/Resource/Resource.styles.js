@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const StyledResource = styled.div`
   &:not(:last-of-type) {
-    margin-bottom: 50px;
+    margin-bottom: var(--h2);
   }
 `
 
@@ -17,5 +17,4 @@ export const Title = styled.a`
 
 export const Description = styled.p`
   color: #fff;
-  line-height: 1.5;
 `

@@ -4,10 +4,10 @@ import SEO from '../components/seo'
 import styled from 'styled-components'
 
 const H1 = styled.h1`
-  font-size: 180px;
-  letter-spacing: -20px;
+  font-size: 7.451rem;
+  letter-spacing: -1rem;
   color: var(--color-ch-green);
-  margin: 0 0 40px;
+  margin-top: 0;
   font-weight: bold;
 
   span {
@@ -15,31 +15,30 @@ const H1 = styled.h1`
   }
 
   @media (max-width: 992px) {
-    font-size: 80px;
+    font-size: 3.815rem;
     letter-spacing: -10px;
   }
 `
 
 const Info = styled.p`
   margin: 0 0 50px;
-  font-size: 30px;
+  font-size: var(--h4);
   line-height: 52px;
 
   @media (max-width: 992px) {
-    font-size: 21px;
-    line-height: 36px;
+    font-size: var(--h5);
   }
 `
 
 const DiscordLink = styled.a`
   background-color: var(--color-ch-purple);
   color: #fff;
-  padding: 28px 100px;
+  padding: var(--h4) 100px;
   border-radius: 80px;
   text-decoration: none;
   font-weight: bold;
-  margin-bottom: 100px;
-  font-size: 21px;
+  margin-bottom: 4.768rem;
+  font-size: var(--h5);
   transition: background-color 0.2s ease 0.1s;
   display: flex;
   align-items: center;
@@ -47,7 +46,7 @@ const DiscordLink = styled.a`
   width: 250px;
 
   @media (max-width: 992px) {
-    padding: 21px 30px;
+    padding: var(--h5) 30px;
     width: auto;
   }
 
@@ -70,8 +69,8 @@ const IndexPage = () => (
     <Info>
       CodeHelp is community-driven Discord server, comprised of developers,
       designers, and marketers of all skill levels. Our goal is to create a fun,
-      helpful discord based group where people can get the development and
-      programming support they need.
+      helpful group where people can get the development and programming support
+      they need.
     </Info>
     <DiscordLink
       href="https://discord.gg/KntFa9p"

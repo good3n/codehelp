@@ -1,11 +1,11 @@
 import styled from 'styled-components'
 
 export const StyledFooter = styled.footer`
-  margin: 100px 0 50px;
+  margin: 4.768rem 0 50px;
   display: grid;
   grid-template-columns: 1fr 1.6fr;
   align-items: center;
-  font-size: 16px;
+  font-size: var(--small);
 
   @media (max-width: 991px) {
     grid-template-columns: 1fr;
@@ -23,7 +23,7 @@ export const StyledFooter = styled.footer`
     text-decoration: none;
 
     @media (max-width: 991px) {
-      margin: 20px 0 0;
+      margin: 1rem 0 0;
     }
 
     &:hover {
