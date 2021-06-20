@@ -83,6 +83,12 @@
                   "name": "JavaScript30",
                   "description": "Build 30 things with vanilla JS in 30 days with 30 tutorials.",
                   "link": "https://javascript30.com/"
+                },
+                {
+                  "id": "jamstack",
+                  "name": "Jamstack",
+                  "description": "Comprehensive guide for building Jamstack sites and home of the global Jamstack community.",
+                  "link": "https://jamstack.org/"
                 }
               ]
             }
