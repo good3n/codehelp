@@ -267,6 +267,12 @@
               "name": "Design",
               "resources": [
                 {
+                  "id": "figma",
+                  "name": "Figma",
+                  "description": "Figma brings your teams together to design better products from start to finish.",
+                  "link": "https://www.figma.com/"
+                },
+                {
                   "id": "coolors",
                   "name": "Coolors",
                   "description": "Create the perfect palette or get inspired by thousands of beautiful color schemes.",
