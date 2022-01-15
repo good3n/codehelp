@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import Popup from 'reactjs-popup'
 
 export const StyledHeader = styled.header`
-  padding: 4.768rem 0 50px;
+  padding: 3rem 0 50px;
   display: flex;
   align-items: center;
 
@@ -23,7 +23,8 @@ export const Nav = styled.ul`
   align-items: center;
 
   li {
-    display: block;
+    display: flex;
+    align-items: center;
     margin: 0;
     font-weight: 600;
     position: relative;
@@ -50,7 +51,7 @@ export const Nav = styled.ul`
 
   svg {
     width: 24px;
-    margin: 3px 0 0 30px;
+    margin-left: 30px;
     cursor: pointer;
 
     &:hover {

@@ -1,51 +1,17 @@
 import React from 'react'
 import Layout from '../components/Layout'
 import Seo from '../components/Seo'
-import styled from 'styled-components'
+import { StyledResources } from '../assets/styles/pages/Resources.styles'
 import Resources from '../data/resources.json'
 import { ResourcesSidebar } from '../components/ResourcesSidebar'
 import { Resource } from '../components/Resource'
-
-const Grid = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  gap: 50px;
-
-  @media (max-width: 991px) {
-    grid-template-columns: 1fr;
-  }
-
-  .label:not(:first-of-type) {
-    margin-top: 4.768rem;
-  }
-
-  h2 {
-    margin-bottom: 0;
-    padding-bottom: 30px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-  }
-
-  h3 {
-    border-bottom: 3px dashed;
-    display: inline-block;
-    border-color: var(--color-ch-purple);
-    padding-bottom: 5px;
-    margin: 40px 0 30px;
-
-    span {
-      color: var(--color-ch-purple);
-      display: inline-block;
-      margin-right: 5px;
-    }
-  }
-`
 
 const ResourcesPage = () => {
   const { resources } = Resources
   return (
     <Layout>
       <Seo title="Resources" />
-      <Grid>
+      <StyledResources>
         <ResourcesSidebar />
         <div>
           {resources.map(({ label }) => {
@@ -78,7 +44,7 @@ const ResourcesPage = () => {
             )
           })}
         </div>
-      </Grid>
+      </StyledResources>
     </Layout>
   )
 }

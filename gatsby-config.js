@@ -7,6 +7,10 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
+    `gatsby-plugin-image`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-anchor-links`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -14,9 +18,6 @@ module.exports = {
         path: `${__dirname}/src/assets/images`,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    `gatsby-plugin-anchor-links`,
     // {
     //   resolve: `gatsby-plugin-csp`,
     //   options: {
