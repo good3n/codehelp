@@ -133,10 +133,10 @@
                   "link": "https://nextjs.org/"
                 },
                 {
-                  "id": "react-sticky-box",
-                  "name": "React Sticky Box",
-                  "description": "Sticky Boxes with sensible behaviour if the content is bigger than the viewport.",
-                  "link": "https://react-sticky-box.codecks.io/"
+                  "id": "react-stickynode",
+                  "name": "React Sticky Node",
+                  "description": "A performant and comprehensive React sticky component.",
+                  "link": "https://github.com/yahoo/react-stickynode#readme"
                 },
                 {
                   "id": "react-joyride",
@@ -175,6 +175,26 @@
                   "name": "NuxtJS",
                   "description": "Build your next Vue.js application with confidence using NuxtJS. An open source framework making web development simple and powerful.",
                   "link": "https://nuxtjs.org/"
+                }
+              ]
+            }
+          },
+          {
+            "category": {
+              "id": "svelte",
+              "name": "Svelte",
+              "resources": [
+                {
+                  "id": "svelte1",
+                  "name": "Svelte",
+                  "description": "Svelte is a radical new approach to building user interfaces.",
+                  "link": "https://svelte.dev/"
+                },
+                {
+                  "id": "svelte-kit",
+                  "name": "Svelte Kit",
+                  "description": "SvelteKit is a framework for building web applications of all sizes, with a beautiful development experience and flexible filesystem-based routing.",
+                  "link": "https://kit.svelte.dev/"
                 }
               ]
             }
