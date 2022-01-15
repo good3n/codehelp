@@ -1,6 +1,6 @@
 import React from 'react'
-import Layout from '../components/layout'
-import SEO from '../components/seo'
+import Layout from '../components/Layout'
+import Seo from '../components/Seo'
 import styled from 'styled-components'
 import Resources from '../data/resources.json'
 import { ResourcesSidebar } from '../components/ResourcesSidebar'
@@ -44,7 +44,7 @@ const ResourcesPage = () => {
   const { resources } = Resources
   return (
     <Layout>
-      <SEO title="Resources" />
+      <Seo title="Resources" />
       <Grid>
         <ResourcesSidebar />
         <div>

@@ -1,6 +1,6 @@
 import React from 'react'
-import Layout from '../components/layout'
-import SEO from '../components/seo'
+import Layout from '../components/Layout'
+import Seo from '../components/Seo'
 import styled from 'styled-components'
 
 const H1 = styled.h1`
@@ -62,7 +62,7 @@ const DiscordLink = styled.a`
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="CodeHelp Discord Server" />
+    <Seo title="CodeHelp Discord Server" />
     <H1>
       code<span>help</span>
     </H1>
