@@ -10,7 +10,7 @@ import PropTypes from 'prop-types'
 import { useStaticQuery, graphql } from 'gatsby'
 import '../assets/fonts/fonts.css'
 import '../assets/styles/normalize.css'
-import '../assets/styles/Layout.css'
+import '../assets/styles/layout.css'
 import { Header } from './Header'
 import { Footer } from './Footer'
 
