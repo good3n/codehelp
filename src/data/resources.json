@@ -89,6 +89,12 @@
                   "name": "Jamstack",
                   "description": "Comprehensive guide for building Jamstack sites and home of the global Jamstack community.",
                   "link": "https://jamstack.org/"
+                },
+                {
+                  "id": "bundlephobia",
+                  "name": "Bundlephobia",
+                  "description": "Find the cost of adding a npm package to your bundle.",
+                  "link": "https://bundlephobia.com/"
                 }
               ]
             }
@@ -227,6 +233,34 @@
                   "name": "WPGraphQL",
                   "description": "WPGraphQL is a free, open-source WordPress plugin that provides an extendable GraphQL schema and API for any WordPress site.",
                   "link": "https://www.wpgraphql.com/"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": {
+        "id": "tooling-bundlers",
+        "name": "Tooling & Bundlers",
+        "categories": [
+          {
+            "category": {
+              "id": "vite",
+              "name": "Vite",
+              "resources": [
+                {
+                  "id": "vitejs",
+                  "name": "Vite",
+                  "description": "Next Generation Frontend Tooling",
+                  "link": "https://vitejs.dev/"
+                },
+                {
+                  "id": "vite-react",
+                  "name": "@vitejs/plugin-react",
+                  "description": "Provides all-in-one React Support.",
+                  "link": "https://github.com/vitejs/vite/tree/main/packages/plugin-react"
                 }
               ]
             }
