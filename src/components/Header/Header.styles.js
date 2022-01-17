@@ -6,8 +6,9 @@ export const StyledHeader = styled.header`
   display: flex;
   align-items: center;
 
-  @media (max-width: 991px) {
+  @media (max-width: 992px) {
     padding: var(--font-size__h2) 0;
+    align-items: flex-start;
   }
 
   a {
@@ -16,20 +17,28 @@ export const StyledHeader = styled.header`
   }
 `
 
-export const Nav = styled.ul`
+export const Nav = styled.nav`
   margin: 0 0 0 auto;
-  padding: 0;
   display: flex;
   align-items: center;
 
-  li {
-    display: flex;
-    align-items: center;
+  @media (max-width: 992px) {
+    flex-direction: column;
+  }
+
+  a {
+    display: block;
     margin: 0;
     font-weight: 600;
     position: relative;
+    margin-right: 30px;
 
-    &:hover:not(:last-of-type):after {
+    @media (max-width: 992px) {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+
+    /* &:hover:not(:last-of-type):after {
       content: '';
       background: var(--color__purple);
       height: 3px;
@@ -38,11 +47,7 @@ export const Nav = styled.ul`
       right: 0;
       bottom: -5px;
       left: 0;
-    }
-  }
-
-  a {
-    display: block;
+    } */
 
     &.is-active {
       color: var(--color__purple);
@@ -51,8 +56,11 @@ export const Nav = styled.ul`
 
   img {
     width: 32px;
-    margin-left: 30px;
     cursor: pointer;
+
+    @media (max-width: 992px) {
+      margin-left: auto;
+    }
   }
 `
 

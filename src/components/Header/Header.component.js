@@ -11,41 +11,37 @@ const Header = ({ siteTitle }) => (
       <Logo />
     </Link>
     <Nav>
-      <li>
-        <Link
-          to="/resources/"
-          activeClassName="is-active"
-          partiallyActive={true}
-        >
-          Resources
-        </Link>
-      </li>
-      <li>
-        <StyledPopup
-          trigger={<img src={discordIcon} alt="Discord Icon" />}
-          modal
-          closeOnDocumentClick
-        >
-          {close => (
+      <Link to="/learning" activeClassName="is-active" partiallyActive={true}>
+        Learning
+      </Link>
+      <Link to="/resources/" activeClassName="is-active" partiallyActive={true}>
+        Resources
+      </Link>
+
+      <StyledPopup
+        trigger={<img src={discordIcon} alt="Discord Icon" />}
+        modal
+        closeOnDocumentClick
+      >
+        {close => (
+          <div>
+            <p>Join the CodeHelp Discord server?</p>
             <div>
-              <p>Join the CodeHelp Discord server?</p>
-              <div>
-                <a
-                  href="https://discord.gg/KntFa9p"
-                  title="Join CodeHelp Discord!"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                >
-                  Yes
-                </a>
-                <button onClick={() => close()} tabIndex="0">
-                  No
-                </button>
-              </div>
+              <a
+                href="https://discord.gg/KntFa9p"
+                title="Join CodeHelp Discord!"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                Yes
+              </a>
+              <button onClick={() => close()} tabIndex="0">
+                No
+              </button>
             </div>
-          )}
-        </StyledPopup>
-      </li>
+          </div>
+        )}
+      </StyledPopup>
     </Nav>
   </StyledHeader>
 )

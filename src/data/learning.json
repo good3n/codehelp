@@ -1,0 +1,120 @@
+{
+  "learning": [
+    {
+      "label": {
+        "id": "html-css",
+        "name": "HTML & CSS",
+        "categories": [
+          {
+            "category": {
+              "id": "html",
+              "name": "HTML",
+              "resources": [
+                {
+                  "id": "html-intro",
+                  "name": "Introduction to HTML",
+                  "description": "At its heart, HTML is a fairly simple language made up of elements, which can be applied to pieces of text to give them different meaning in a document.",
+                  "link": "https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML"
+                },
+                {
+                  "id": "accessibility",
+                  "name": "What is accessibility?",
+                  "description": "Accessibility is the practice of making your websites usable by as many people as possible.",
+                  "link": "https://developer.mozilla.org/en-US/docs/Learn/Accessibility/What_is_accessibility"
+                }
+              ]
+            }
+          },
+          {
+            "category": {
+              "id": "css",
+              "name": "CSS",
+              "resources": [
+                {
+                  "id": "css-learn",
+                  "name": "Learn to style HTML using CSS",
+                  "description": "HTML is used to define the structure and semantics of your content, CSS is used to style it and lay it out.",
+                  "link": "https://developer.mozilla.org/en-US/docs/Learn/CSS"
+                },
+                {
+                  "id": "grid-basics",
+                  "name": "Basic Concepts of grid layout",
+                  "description": "CSS Grid Layout introduces a two-dimensional grid system to CSS. Grids can be used to lay out major page areas or small user interface elements.",
+                  "link": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout"
+                },
+                {
+                  "id": "grid-relationships",
+                  "name": "Relationship of grid layout to other layout methods",
+                  "description": "CSS Grid Layout has been designed to work alongside other parts of CSS, as part of a complete system for doing the layout.",
+                  "link": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": {
+        "id": "javascript",
+        "name": "JavaScript",
+        "categories": [
+          {
+            "category": {
+              "id": "js",
+              "name": "JavaScript",
+              "resources": [
+                {
+                  "id": "reintro-js",
+                  "name": "A re-introduction to JavaScript",
+                  "description": "Why a re-introduction? Because JavaScript is notorious for being misunderstood. It is often derided as being a toy, but beneath its layer of deceptive simplicity, powerful language features await.",
+                  "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript"
+                },
+                {
+                  "id": "modern-js-tut",
+                  "name": "The Modern JavaScript Tutorial",
+                  "description": "How it's done now. From the basics to advanced topics with simple, but detailed explanations.",
+                  "link": "https://javascript.info/"
+                },
+                {
+                  "id": "js-cheatsheet",
+                  "name": "JavaScript Cheatsheet",
+                  "description": "This basic cheat sheet, mostly based on the lessons on freeCodeCamp, tries to provide a basic reference for beginner and advanced developers and lower the entry barrier for newcomers.",
+                  "link": "https://javascript.pythoncheatsheet.org/"
+                }
+              ]
+            }
+          },
+          {
+            "category": {
+              "id": "react",
+              "name": "React (Coming soon)",
+              "resources": [
+                {
+                  "id": "",
+                  "name": "",
+                  "description": "",
+                  "link": ""
+                }
+              ]
+            }
+          },
+          {
+            "category": {
+              "id": "typescript",
+              "name": "Typescript (Coming soon)",
+              "resources": [
+                {
+                  "id": "",
+                  "name": "",
+                  "description": "",
+                  "link": ""
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
