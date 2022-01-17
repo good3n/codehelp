@@ -30,7 +30,7 @@ export const StyledHome = styled.div`
     }
   }
 
-  a.discord {
+  a {
     background-color: var(--color__purple);
     color: #fff;
     padding: 1rem 50px;
@@ -53,7 +53,7 @@ export const StyledHome = styled.div`
       background-color: var(--color__green);
     }
 
-    svg {
+    img {
       width: 32px;
       margin-right: 15px;
     }

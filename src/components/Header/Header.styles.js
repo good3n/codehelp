@@ -49,16 +49,10 @@ export const Nav = styled.ul`
     }
   }
 
-  svg {
-    width: 24px;
+  img {
+    width: 32px;
     margin-left: 30px;
     cursor: pointer;
-
-    &:hover {
-      path {
-        fill: var(--color__purple);
-      }
-    }
   }
 `
 
