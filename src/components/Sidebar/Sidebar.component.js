@@ -3,29 +3,33 @@ import PropTypes from 'prop-types'
 import { AnchorLink } from 'gatsby-plugin-anchor-links'
 import { StyledSidebar, Heading } from './Sidebar.styles'
 
-const Sidebar = ({ data, page }) => {
-  return (
-    <StyledSidebar>
-      {data.map(({ label: { id, name, categories } }) => {
+const Sidebar = ({ data, page }) => (
+  <StyledSidebar>
+    {data.map(
+      ({
+        label: { id: labelId, name: labelName, categories: labelCategories },
+      }) => {
         return (
-          <div key={id}>
-            <Heading key={id}>{name}</Heading>
-            {categories.map(({ category }) => (
-              <li key={category.id}>
-                <AnchorLink
-                  title={category.name}
-                  to={`/${page}#${category.id}`}
-                >
-                  {category.name}
-                </AnchorLink>
-              </li>
-            ))}
+          <div key={labelId}>
+            <Heading key={labelId}>{labelName}</Heading>
+            {labelCategories.map(
+              ({ category: { id: categoryId, name: categoryName } }) => (
+                <li key={categoryId}>
+                  <AnchorLink
+                    title={categoryName}
+                    to={`/${page}#${categoryId}`}
+                  >
+                    {categoryName}
+                  </AnchorLink>
+                </li>
+              )
+            )}
           </div>
         )
-      })}
-    </StyledSidebar>
-  )
-}
+      }
+    )}
+  </StyledSidebar>
+)
 
 Sidebar.propTypes = {
   data: PropTypes.array.isRequired,
