@@ -5,23 +5,20 @@ import { StyledSidebar, Heading } from './Sidebar.styles'
 const Sidebar = ({ data, page }) => {
   return (
     <StyledSidebar>
-      {data.map(({ label }) => {
+      {data.map(({ label: { id, name, categories } }) => {
         return (
-          <>
-            <Heading key={label.id}>{label.name}</Heading>
-            {label.categories.map(({ category }) => {
+          <div key={id}>
+            <Heading key={id}>{name}</Heading>
+            {categories.map(({ category: { id, name } }) => {
               return (
-                <li key={category.id}>
-                  <AnchorLink
-                    to={`/${page}#${category.id}`}
-                    title={category.name}
-                  >
-                    {category.name}
+                <li key={id}>
+                  <AnchorLink to={`/${page}#${id}`} title={name}>
+                    {name}
                   </AnchorLink>
                 </li>
               )
             })}
-          </>
+          </div>
         )
       })}
     </StyledSidebar>

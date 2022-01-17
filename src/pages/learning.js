@@ -16,35 +16,29 @@ const LearningPage = () => {
         <div>
           <Sidebar data={learning} page="learning" />
           <div>
-            {learning.map(({ label }) => {
-              return (
-                <div key={label.id} className="label">
-                  <h2>{label.name}</h2>
-                  {label.categories.map(({ category }) => {
-                    return (
-                      <div id={category.id}>
-                        <h3>
-                          <span>#</span>
-                          {category.name}
-                        </h3>
-                        {category.resources.map(
-                          ({ id, name, description, link }) => {
-                            return (
-                              <Resource
-                                id={id}
-                                name={name}
-                                desc={description}
-                                link={link}
-                              />
-                            )
-                          }
-                        )}
+            {learning.map(({ label: { id, name, categories } }) => (
+              <div key={id} className="label">
+                <h2>{name}</h2>
+                {categories.map(({ category: { id, name, resources } }) => (
+                  <div key={id} id={id}>
+                    <h3>
+                      <span>#</span>
+                      {name}
+                    </h3>
+                    {resources.map(({ id, name, description, link }) => (
+                      <div key={id}>
+                        <Resource
+                          id={id}
+                          name={name}
+                          desc={description}
+                          link={link}
+                        />
                       </div>
-                    )
-                  })}
-                </div>
-              )
-            })}
+                    ))}
+                  </div>
+                ))}
+              </div>
+            ))}
           </div>
         </div>
       </StyledResources>

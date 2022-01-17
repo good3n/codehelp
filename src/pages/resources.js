@@ -17,25 +17,29 @@ const ResourcesPage = () => {
           <Sidebar data={resources} page="resources" />
           <div>
             {resources.map(({ label }) => {
+              const { id, name, categories } = label
               return (
-                <div key={label.id} className="label">
-                  <h2>{label.name}</h2>
-                  {label.categories.map(({ category }) => {
+                <div key={id} className="label">
+                  <h2>{name}</h2>
+                  {categories.map(({ category }) => {
+                    const { id, name } = category
                     return (
-                      <div id={category.id}>
+                      <div key={id} id={id}>
                         <h3>
                           <span>#</span>
-                          {category.name}
+                          {name}
                         </h3>
                         {category.resources.map(
                           ({ id, name, description, link }) => {
                             return (
-                              <Resource
-                                id={id}
-                                name={name}
-                                desc={description}
-                                link={link}
-                              />
+                              <div key={id}>
+                                <Resource
+                                  id={id}
+                                  name={name}
+                                  desc={description}
+                                  link={link}
+                                />
+                              </div>
                             )
                           }
                         )}
