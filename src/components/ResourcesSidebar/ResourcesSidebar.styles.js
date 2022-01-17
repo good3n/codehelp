@@ -12,12 +12,12 @@ export const Sidebar = styled.aside`
   }
 
   a {
-    color: var(--color-ch-green);
+    color: var(--color__green);
     text-decoration: none;
   }
 `
 
 export const Heading = styled.li`
   font-weight: 600;
-  margin: var(--h4) 0 0.8rem !important;
+  margin: var(--font-size__h4) 0 0.8rem !important;
 `

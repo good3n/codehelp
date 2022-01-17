@@ -22,12 +22,12 @@ export const StyledResources = styled.div`
   h3 {
     border-bottom: 3px dashed;
     display: inline-block;
-    border-color: var(--color-ch-purple);
+    border-color: var(--color__purple);
     padding-bottom: 5px;
     margin: 2rem 0 1rem;
 
     span {
-      color: var(--color-ch-purple);
+      color: var(--color__purple);
       display: inline-block;
       margin-right: 5px;
     }

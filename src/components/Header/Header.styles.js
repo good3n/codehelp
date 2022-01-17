@@ -7,7 +7,7 @@ export const StyledHeader = styled.header`
   align-items: center;
 
   @media (max-width: 991px) {
-    padding: var(--h2) 0;
+    padding: var(--font-size__h2) 0;
   }
 
   a {
@@ -31,7 +31,7 @@ export const Nav = styled.ul`
 
     &:hover:not(:last-of-type):after {
       content: '';
-      background: var(--color-ch-purple);
+      background: var(--color__purple);
       height: 3px;
       width: 100%;
       position: absolute;
@@ -45,7 +45,7 @@ export const Nav = styled.ul`
     display: block;
 
     &.is-active {
-      color: var(--color-ch-purple);
+      color: var(--color__purple);
     }
   }
 
@@ -56,7 +56,7 @@ export const Nav = styled.ul`
 
     &:hover {
       path {
-        fill: var(--color-ch-purple);
+        fill: var(--color__purple);
       }
     }
   }
@@ -68,9 +68,9 @@ export const StyledPopup = styled(Popup)`
   }
 
   &-content {
-    background: var(--bg-color);
+    background: var(--color__background);
     border-radius: 10px;
-    padding: var(--h3);
+    padding: var(--font-size__h3);
     font-size: 1rem;
 
     p {
@@ -82,7 +82,7 @@ export const StyledPopup = styled(Popup)`
         display: flex;
 
         a {
-          color: var(--color-ch-green);
+          color: var(--color__green);
           text-decoration: none;
           font-weight: bold;
           margin-left: 20px;
@@ -95,7 +95,7 @@ export const StyledPopup = styled(Popup)`
           font-weight: bold;
           padding: 0;
           box-shadow: 0;
-          color: var(--color-ch-green);
+          color: var(--color__green);
           cursor: pointer;
           order: 1;
           margin-left: auto;

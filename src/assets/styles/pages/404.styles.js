@@ -21,7 +21,7 @@ export const StyledError = styled.div`
     margin: 0 auto;
 
     path {
-      fill: var(--color-ch-green);
+      fill: var(--color__green);
 
       &.exclamation {
         fill: #fff;
@@ -29,7 +29,7 @@ export const StyledError = styled.div`
     }
 
     circle {
-      fill: var(--color-ch-purple);
+      fill: var(--color__purple);
     }
   }
 `

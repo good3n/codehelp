@@ -5,7 +5,7 @@ export const StyledFooter = styled.footer`
   display: grid;
   grid-template-columns: 1fr 1.6fr;
   align-items: center;
-  font-size: var(--small);
+  font-size: var(--font-size__small);
 
   @media (max-width: 991px) {
     grid-template-columns: 1fr;
@@ -36,7 +36,7 @@ export const StyledFooter = styled.footer`
     margin-left: 12px;
 
     path {
-      fill: var(--color-ch-green);
+      fill: var(--color__green);
     }
   }
 `
