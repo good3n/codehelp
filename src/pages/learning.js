@@ -17,21 +17,21 @@ const LearningPage = () => {
           <Sidebar data={learning} page="learning" />
           <div>
             {learning.map(({ label: { id, name, categories } }) => (
-              <div key={id} className="label">
+              <div className="label" key={id}>
                 <h2>{name}</h2>
-                {categories.map(({ category: { id, name, resources } }) => (
-                  <div key={id} id={id}>
+                {categories.map(({ category }) => (
+                  <div id={category.id} key={category.id}>
                     <h3>
                       <span>#</span>
-                      {name}
+                      {category.name}
                     </h3>
-                    {resources.map(({ id, name, description, link }) => (
-                      <div key={id}>
+                    {category.resources.map(resource => (
+                      <div key={resource.id}>
                         <Resource
-                          id={id}
-                          name={name}
-                          desc={description}
-                          link={link}
+                          desc={resource.description}
+                          id={resource.id}
+                          link={resource.link}
+                          name={resource.name}
                         />
                       </div>
                     ))}

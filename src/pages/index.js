@@ -20,11 +20,11 @@ const IndexPage = () => (
       </p>
       <a
         href="https://discord.gg/KntFa9p"
-        title="Join CodeHelp Discord!"
-        target="_blank"
         rel="noreferrer noopener"
+        target="_blank"
+        title="Join CodeHelp Discord!"
       >
-        <img src={discordIcon} alt="Discord Icon" />
+        <img alt="Discord Icon" src={discordIcon} />
         Join CodeHelp
       </a>
     </StyledHome>

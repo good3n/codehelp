@@ -33,8 +33,6 @@ function Seo({ description, lang, meta, title }) {
       htmlAttributes={{
         lang,
       }}
-      title={title}
-      titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
       meta={[
         {
           name: `description`,
@@ -69,6 +67,8 @@ function Seo({ description, lang, meta, title }) {
           content: metaDescription,
         },
       ].concat(meta)}
+      title={title}
+      titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
     />
   )
 }

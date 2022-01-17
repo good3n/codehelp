@@ -19,30 +19,27 @@ const ResourcesPage = () => {
             {resources.map(({ label }) => {
               const { id, name, categories } = label
               return (
-                <div key={id} className="label">
+                <div className="label" key={id}>
                   <h2>{name}</h2>
                   {categories.map(({ category }) => {
-                    const { id, name } = category
                     return (
-                      <div key={id} id={id}>
+                      <div id={category.id} key={category.id}>
                         <h3>
                           <span>#</span>
                           {name}
                         </h3>
-                        {category.resources.map(
-                          ({ id, name, description, link }) => {
-                            return (
-                              <div key={id}>
-                                <Resource
-                                  id={id}
-                                  name={name}
-                                  desc={description}
-                                  link={link}
-                                />
-                              </div>
-                            )
-                          }
-                        )}
+                        {category.resources.map(resource => {
+                          return (
+                            <div key={resource.id}>
+                              <Resource
+                                desc={resource.description}
+                                id={resource.id}
+                                link={resource.link}
+                                name={resource.name}
+                              />
+                            </div>
+                          )
+                        })}
                       </div>
                     )
                   })}

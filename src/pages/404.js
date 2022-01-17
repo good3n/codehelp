@@ -11,10 +11,11 @@ const NotFoundPage = () => (
       <div>
         <h1>404 Error</h1>
         <p>
-          Beep Boop Beep. We can't seem to find the page you're looking for.
+          Beep Boop Beep. We can&apos;t seem to find the page you&apos;re
+          looking for.
         </p>
       </div>
-      <img src={robot404} alt="404 Error Robot" />
+      <img alt="404 Error Robot" src={robot404} />
     </StyledError>
   </Layout>
 )

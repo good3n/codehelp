@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { StyledResource, Title, Description } from './Resource.styles'
 
 const Resource = ({ name, desc, link, key }) => (
@@ -9,5 +10,12 @@ const Resource = ({ name, desc, link, key }) => (
     <Description>{desc}</Description>
   </StyledResource>
 )
+
+Resource.propTypes = {
+  name: PropTypes.string.isRequired,
+  desc: PropTypes.string.isRequired,
+  link: PropTypes.string.isRequired,
+  key: PropTypes.string.isRequired,
+}
 
 export default Resource

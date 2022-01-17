@@ -7,21 +7,21 @@ import discordIcon from '../../assets/images/icon-discord.svg'
 
 const Header = ({ siteTitle }) => (
   <StyledHeader>
-    <Link to="/" title={siteTitle}>
+    <Link title={siteTitle} to="/">
       <Logo />
     </Link>
     <Nav>
-      <Link to="/learning" activeClassName="is-active" partiallyActive={true}>
+      <Link activeClassName="is-active" partiallyActive={true} to="/learning">
         Learning
       </Link>
-      <Link to="/resources/" activeClassName="is-active" partiallyActive={true}>
+      <Link activeClassName="is-active" partiallyActive={true} to="/resources/">
         Resources
       </Link>
 
       <StyledPopup
-        trigger={<img src={discordIcon} alt="Discord Icon" />}
-        modal
         closeOnDocumentClick
+        modal
+        trigger={<img alt="Discord Icon" src={discordIcon} />}
       >
         {close => (
           <div>
@@ -29,9 +29,9 @@ const Header = ({ siteTitle }) => (
             <div>
               <a
                 href="https://discord.gg/KntFa9p"
-                title="Join CodeHelp Discord!"
-                target="_blank"
                 rel="noreferrer noopener"
+                target="_blank"
+                title="Join CodeHelp Discord!"
               >
                 Yes
               </a>
