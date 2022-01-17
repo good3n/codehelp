@@ -1,12 +1,16 @@
 import styled from 'styled-components'
 
 export const StyledResources = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  gap: 50px;
+  h1 {
+    + div {
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+      gap: 50px;
 
-  @media (max-width: 991px) {
-    grid-template-columns: 1fr;
+      @media (max-width: 992px) {
+        grid-template-columns: 1fr;
+      }
+    }
   }
 
   .label:not(:first-of-type) {
@@ -17,11 +21,13 @@ export const StyledResources = styled.div`
     margin-bottom: 0;
     padding-bottom: 30px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    font-size: var(--font-size__h4);
   }
 
   h3 {
     border-bottom: 3px dashed;
     display: inline-block;
+    font-size: var(--font-size__h5);
     border-color: var(--color__purple);
     padding-bottom: 5px;
     margin: 2rem 0 1rem;

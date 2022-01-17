@@ -23,11 +23,7 @@ export const StyledHome = styled.div`
 
   p {
     margin: 0 0 50px;
-    font-size: var(--font-size__h4);
-
-    @media (max-width: 992px) {
-      font-size: var(--font-size__h5);
-    }
+    font-size: var(--font-size__h5);
   }
 
   a {
@@ -38,7 +34,6 @@ export const StyledHome = styled.div`
     text-decoration: none;
     font-weight: bold;
     margin-bottom: 4.768rem;
-    font-size: var(--font-size__h5);
     transition: background-color 0.2s ease 0.1s;
     display: inline-flex;
     align-items: center;
