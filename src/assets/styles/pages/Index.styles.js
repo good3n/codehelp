@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 
 export const StyledHome = styled.div`
+  margin-bottom: 4rem;
+
   h1 {
     font-size: var(--font-size__h0);
     color: var(--color__green);
@@ -22,7 +24,7 @@ export const StyledHome = styled.div`
   }
 
   p {
-    margin: 0 0 50px;
+    margin: 0 0 3rem;
     font-size: var(--font-size__h5);
   }
 
@@ -33,7 +35,6 @@ export const StyledHome = styled.div`
     border-radius: 80px;
     text-decoration: none;
     font-weight: bold;
-    margin-bottom: 4.768rem;
     transition: background-color 0.2s ease 0.1s;
     display: inline-flex;
     align-items: center;

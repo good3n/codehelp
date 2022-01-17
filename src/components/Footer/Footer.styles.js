@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const StyledFooter = styled.footer`
-  margin: 4.768rem 0 50px;
+  margin: 5rem 0 3rem;
   display: grid;
   grid-template-columns: 1fr 1.6fr;
   align-items: center;
