@@ -1,14 +1,11 @@
 import React from 'react'
-import Resources from '../../data/resources.json'
 import { AnchorLink } from 'gatsby-plugin-anchor-links'
-import { Sidebar, Heading } from './ResourcesSidebar.styles'
+import { StyledSidebar, Heading } from './Sidebar.styles'
 
-const ResourcesSidebar = () => {
-  const { resources } = Resources
-
+const Sidebar = ({ data, page }) => {
   return (
-    <Sidebar>
-      {resources.map(({ label }) => {
+    <StyledSidebar>
+      {data.map(({ label }) => {
         return (
           <>
             <Heading key={label.id}>{label.name}</Heading>
@@ -16,7 +13,7 @@ const ResourcesSidebar = () => {
               return (
                 <li key={category.id}>
                   <AnchorLink
-                    to={`/resources#${category.id}`}
+                    to={`/${page}#${category.id}`}
                     title={category.name}
                   >
                     {category.name}
@@ -27,8 +24,8 @@ const ResourcesSidebar = () => {
           </>
         )
       })}
-    </Sidebar>
+    </StyledSidebar>
   )
 }
 
-export default ResourcesSidebar
+export default Sidebar

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const Sidebar = styled.aside`
+export const StyledSidebar = styled.aside`
   ul {
     margin: 0;
     padding: 0;
