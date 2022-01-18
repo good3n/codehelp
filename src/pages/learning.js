@@ -1,5 +1,4 @@
 import React from 'react'
-import { StyledResources } from '../assets/styles/pages/Resources.styles'
 import Layout from '../components/Layout'
 import Seo from '../components/Seo'
 import Learning from '../data/learning.json'
@@ -11,13 +10,10 @@ const LearningPage = () => {
   return (
     <Layout>
       <Seo title="Learning" />
-      <StyledResources>
-        <h1>Learning</h1>
-        <div>
-          <Sidebar data={learning} page="learning" />
-          <DataList data={learning} />
-        </div>
-      </StyledResources>
+      <div className="wrapper">
+        <Sidebar data={learning} page="learning" />
+        <DataList data={learning} />
+      </div>
     </Layout>
   )
 }

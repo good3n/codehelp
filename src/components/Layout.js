@@ -11,7 +11,8 @@ import { useStaticQuery, graphql } from 'gatsby'
 import '../assets/fonts/fonts.css'
 import '../assets/styles/normalize.css'
 import GlobalStyle from '../assets/styles/global'
-import { Header } from './Header'
+// import { Header } from './Header'
+import { HeaderNew } from './HeaderNew'
 import { Footer } from './Footer'
 
 const Layout = ({ children }) => {
@@ -29,7 +30,8 @@ const Layout = ({ children }) => {
     <>
       <GlobalStyle />
       <div className="container">
-        <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+        {/* <Header siteTitle={data.site.siteMetadata?.title || `Title`} /> */}
+        <HeaderNew siteTitle={data.site.siteMetadata?.title || `Title`} />
         <main>{children}</main>
         <Footer />
       </div>

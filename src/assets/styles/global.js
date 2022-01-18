@@ -60,7 +60,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Apercu-Mono-Pro', sans-serif;
     font-weight: 700;
     line-height: 1.3;
-    letter-spacing: -0.08em;
+    letter-spacing: -0.04em;
   }
 
   h1 {
@@ -92,10 +92,33 @@ const GlobalStyle = createGlobalStyle`
     margin-bottom: var(--font-size__base);
   }
 
+  a {
+    text-decoration: none;
+  }
+
+  button {
+    border-radius: 10px;
+    border: none;
+    padding: 0;
+    line-height: 1;
+    color: #fff;
+    background-color: var(--color__purple);
+  }
+
   .container {
     margin: 0 auto;
     padding: 0 30px;
     max-width: 1100px;
+  }
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 50px;
+
+    @media (max-width: 991px) {
+      grid-template-columns: 1fr;
+    }
   }
 
   @keyframes anvil {

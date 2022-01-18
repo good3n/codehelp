@@ -1,10 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { StyledDataList } from './DataList.styles'
 import { Resource } from '../Resource'
 
 const DataList = ({ data }) => {
   return (
-    <div>
+    <StyledDataList>
       {data.map(({ label: { id, name, categories } }) => (
         <div className="label" key={id}>
           <h2>{name}</h2>
@@ -28,7 +29,7 @@ const DataList = ({ data }) => {
           ))}
         </div>
       ))}
-    </div>
+    </StyledDataList>
   )
 }
 

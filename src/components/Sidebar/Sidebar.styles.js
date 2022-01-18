@@ -1,8 +1,14 @@
 import styled from 'styled-components'
 
 export const StyledSidebar = styled.aside`
-  ul {
+  h2 {
+    font-weight: 600;
     margin: 0;
+    font-size: var(--font-size__base);
+  }
+
+  ul {
+    margin: 1rem 0 3rem;
     padding: 0;
   }
 
@@ -15,9 +21,4 @@ export const StyledSidebar = styled.aside`
     color: var(--color__green);
     text-decoration: none;
   }
-`
-
-export const Heading = styled.li`
-  font-weight: 600;
-  margin: var(--font-size__h4) 0 0.8rem !important;
 `
