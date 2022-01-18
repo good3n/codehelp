@@ -26,6 +26,10 @@ export const StyledHome = styled.div`
   p {
     margin: 0 0 3rem;
     font-size: var(--font-size__h5);
+
+    @media (max-width: 991px) {
+      font-size: var(--font-size__base);
+    }
   }
 
   a {

@@ -145,6 +145,7 @@ export const NavToggle = styled.button`
 
   @media (max-width: 991px) {
     display: block;
+    margin-left: 10px;
   }
 
   .nav-toggle {
@@ -157,6 +158,7 @@ export const NavToggle = styled.button`
     border: 0;
     margin: 0;
     overflow: visible;
+    outline: none;
 
     &.is-active {
       .nav-inner,
