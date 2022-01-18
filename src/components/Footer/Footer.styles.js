@@ -7,7 +7,7 @@ export const StyledFooter = styled.footer`
   align-items: center;
   font-size: var(--font-size__small);
 
-  @media (max-width: 992px) {
+  @media (max-width: 991px) {
     grid-template-columns: 1fr;
   }
 
@@ -22,7 +22,7 @@ export const StyledFooter = styled.footer`
     color: #fff;
     text-decoration: none;
 
-    @media (max-width: 992px) {
+    @media (max-width: 991px) {
       margin: 1rem 0 0;
     }
 

@@ -7,13 +7,12 @@ export const StyledHeader = styled.header`
   display: flex;
   align-items: center;
 
-  @media (max-width: 992px) {
-    padding: var(--font-size__h2) 0;
+  @media (max-width: 991px) {
+    padding: 3rem 0;
     align-items: flex-start;
   }
 
-  a {
-    text-decoration: none;
-    color: #fff;
+  a.logo {
+    display: inline-flex;
   }
 `

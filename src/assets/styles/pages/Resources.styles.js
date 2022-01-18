@@ -7,7 +7,7 @@ export const StyledResources = styled.div`
       grid-template-columns: 1fr 3fr;
       gap: 50px;
 
-      @media (max-width: 992px) {
+      @media (max-width: 991px) {
         grid-template-columns: 1fr;
       }
     }

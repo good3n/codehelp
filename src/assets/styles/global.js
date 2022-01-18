@@ -27,10 +27,16 @@ const GlobalStyle = createGlobalStyle`
     background: var(--color__purple);
   }
 
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
   html {
     font-size: 112.5%;
 
-    @media (max-width: 992px) {
+    @media (max-width: 991px) {
       font-size: 100%;
     }
   }
@@ -60,7 +66,7 @@ const GlobalStyle = createGlobalStyle`
   h1 {
     font-size: var(--font-size__h1);
 
-    @media (max-width: 992px) {
+    @media (max-width: 991px) {
       font-size: var(--font-size__h2);
       margin-top: 0;
     }

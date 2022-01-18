@@ -8,7 +8,7 @@ export const StyledHome = styled.div`
     color: var(--color__green);
     margin-top: 0;
 
-    @media (max-width: 992px) {
+    @media (max-width: 991px) {
       font-size: var(--font-size__h1);
     }
 
@@ -40,7 +40,7 @@ export const StyledHome = styled.div`
     align-items: center;
     justify-content: center;
 
-    @media (max-width: 992px) {
+    @media (max-width: 991px) {
       padding: var(--font-size__h5) 30px;
       width: auto;
     }

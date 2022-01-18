@@ -6,7 +6,7 @@ export const StyledError = styled.div`
   align-items: center;
   gap: 100px;
 
-  @media (max-width: 992px) {
+  @media (max-width: 991px) {
     grid-template-columns: 2fr 1fr;
     gap: 50px;
   }
