@@ -15,6 +15,7 @@ export const StyledHeader = styled.header`
     display: flex;
 
     svg {
+      height: 76px;
       margin: 0 -11px;
       position: relative;
       top: -3px;

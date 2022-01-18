@@ -17,6 +17,11 @@ export const StyledNav = styled.nav`
   justify-content: end;
   border-bottom: 2px solid rgba(255, 255, 255, 0.15);
 
+  .links {
+    width: 100%;
+    text-align: right;
+  }
+
   &.is-active {
     @media (max-width: 991px) {
       .links {
@@ -60,6 +65,7 @@ export const StyledNav = styled.nav`
 
     .links {
       display: none;
+      text-align: left;
     }
   }
 
