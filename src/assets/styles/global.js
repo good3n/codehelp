@@ -96,13 +96,37 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: none;
   }
 
-  button {
+  button,
+  a.button {
     border-radius: 10px;
     border: none;
     padding: 0;
     line-height: 1;
     color: #fff;
     background-color: var(--color__purple);
+    border: 2px solid var(--color__purple);
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    /* font-size: var(--font-size__); */
+    padding: 1rem 3rem;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 42 79'%3E%3Cpath fill='%23202225' fill-opacity='.1' d='M22.5 39.5C22 23.5 31.897 3.392 38.437.767H.5v78h40.937C36.365 73.877 23 55.5 22.5 39.5Z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: left center;
+      background-size: cover;
+      height: 100%;
+      width: 40px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+    }
   }
 
   .container {

@@ -223,6 +223,7 @@ export const NavToggle = styled.button`
   height: 60px;
   width: 60px;
   outline: none;
+  padding: 0;
   border-radius: 0 10px 10px 0;
   border: 2px solid rgba(255, 255, 255, 0.15);
   border-left: none;
@@ -363,6 +364,7 @@ export const DiscordLink = styled.button`
   justify-content: center;
   border-radius: 10px 10px 10px 0;
   border: 2px inset rgba(255, 255, 255, 0.15);
+  padding: 0;
   cursor: pointer;
 
   svg {
