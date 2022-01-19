@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import { Nav } from '../Nav'
 import { StyledHeader } from './Header.styles'
 
-const HeaderNew = () => {
+const Header = () => {
   const [navOpen, setNavOpen] = useState(false)
   return (
     <StyledHeader className={navOpen && `is-active`}>
@@ -32,4 +32,4 @@ const HeaderNew = () => {
   )
 }
 
-export default HeaderNew
+export default Header

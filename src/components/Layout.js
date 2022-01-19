@@ -29,7 +29,6 @@ const Layout = ({ children }) => {
     <>
       <GlobalStyle />
       <div className="container">
-        {/* <Header siteTitle={data.site.siteMetadata?.title || `Title`} /> */}
         <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
         <main>{children}</main>
         <Footer />

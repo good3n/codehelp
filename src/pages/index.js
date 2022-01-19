@@ -7,7 +7,7 @@ import discordIcon from '../assets/images/icon-discord.svg'
 
 const IndexPage = () => (
   <Layout>
-    <Seo title="CodeHelp Discord Server" />
+    <Seo title="CodeHelp Community and Discord Server" />
     <StyledHome>
       <div>
         <h1>
