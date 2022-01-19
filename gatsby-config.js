@@ -37,10 +37,10 @@ module.exports = {
         name: `gatsby-codehelp`,
         short_name: `codehelp`,
         start_url: `/`,
-        background_color: `#4FD8C3`,
-        theme_color: `#4FD8C3`,
+        background_color: `#37393E`,
+        theme_color: `#5E7CE7`,
         display: `standalone`,
-        icon: `src/assets/images/favicon.svg`, // This path is relative to the root of the site.
+        icon: `src/assets/images/icon.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
