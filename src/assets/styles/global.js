@@ -155,7 +155,7 @@ const GlobalStyle = createGlobalStyle`
 
   .wrapper {
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1.2fr 3fr;
     gap: 50px;
 
     @media (max-width: 991px) {

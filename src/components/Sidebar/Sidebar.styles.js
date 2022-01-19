@@ -1,6 +1,10 @@
 import styled from 'styled-components'
 
 export const StyledSidebar = styled.aside`
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  padding: 3rem 30px;
+  border-radius: 10px;
+
   h2 {
     font-weight: 600;
     margin: 0;
@@ -19,7 +23,10 @@ export const StyledSidebar = styled.aside`
 
   a {
     color: var(--color__green);
-    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   > div:last-of-type ul {
