@@ -34,8 +34,10 @@ const IndexPage = () => (
         target="_blank"
         title="Join CodeHelp Discord!"
       >
-        <img alt="Discord Icon" src={discordIcon} />
-        Join CodeHelp
+        <span>
+          <img alt="Discord Icon" src={discordIcon} />
+          Join CodeHelp
+        </span>
       </a>
     </StyledHome>
   </Layout>

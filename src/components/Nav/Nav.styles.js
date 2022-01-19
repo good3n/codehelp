@@ -244,7 +244,6 @@ export const NavToggle = styled.button`
     text-transform: none;
     border: 0;
     margin: 0;
-    overflow: visible;
     outline: none;
     position: relative;
     top: 3px;

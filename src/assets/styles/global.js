@@ -109,7 +109,6 @@ const GlobalStyle = createGlobalStyle`
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    /* font-size: var(--font-size__); */
     padding: 1rem 3rem;
     position: relative;
     overflow: hidden;
@@ -126,6 +125,25 @@ const GlobalStyle = createGlobalStyle`
       top: 0;
       left: 0;
       bottom: 0;
+      transition: all .3s ease-in-out;
+    }
+
+    &:hover {
+      &::before {
+        width: 200%;
+        left: -5%;
+      }
+    }
+
+    span {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    img,
+    svg {
+      position: relative;
     }
   }
 
