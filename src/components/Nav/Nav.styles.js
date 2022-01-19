@@ -1,12 +1,94 @@
 import styled from 'styled-components'
 import Popup from 'reactjs-popup'
 
-export const StyledNav = styled.nav`
-  margin: 0 0 0 auto;
-  display: flex;
-  align-items: center;
+export const NavWrap = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 60px;
+  justify-content: end;
+  align-items: end;
 
   @media (max-width: 991px) {
+    grid-template-columns: 1fr 60px 60px;
+  }
+`
+
+export const StyledNav = styled.nav`
+  display: flex;
+  justify-content: end;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.15);
+
+  .links {
+    width: 100%;
+    text-align: right;
+  }
+
+  &.is-active {
+    @media (max-width: 991px) {
+      .links {
+        display: flex;
+        position: absolute;
+        top: 8rem;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        opacity: 1;
+        visibility: visible;
+
+        a,
+        a.is-active {
+          color: var(--color__background);
+          font-size: var(--font-size__h5);
+          border-bottom: 3px dashed var(--color__background);
+          width: 100%;
+          padding-top: 1rem;
+
+          &:hover {
+            color: var(--color__green);
+
+            span {
+              color: var(--color__background);
+            }
+          }
+        }
+
+        span {
+          display: block;
+          font-size: var(--font-size__small);
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 991px) {
+    order: 0;
+
+    .links {
+      display: none;
+      text-align: left;
+    }
+  }
+
+  a {
+    display: inline-block;
+    color: #fff;
+    font-weight: 700;
+    margin-right: 30px;
+    padding-bottom: 11px;
+    position: relative;
+    top: 2px;
+    border-bottom: 2px solid transparent;
+
+    &.is-active {
+      border-color: var(--color__green);
+    }
+  }
+
+  span {
+    display: none;
+  }
+
+  /* @media (max-width: 991px) {
     &:not(.is-active) {
       .links {
         opacity: 0;
@@ -88,12 +170,12 @@ export const StyledNav = styled.nav`
     @media (max-width: 991px) {
       margin-left: auto;
     }
-  }
+  } */
 `
 
 export const StyledPopup = styled(Popup)`
   &-overlay {
-    background-color: rgba(94, 124, 231, 0.8);
+    background-color: rgba(94, 124, 231, 0.9);
   }
 
   &-content {
@@ -136,16 +218,21 @@ export const StyledPopup = styled(Popup)`
 
 export const NavToggle = styled.button`
   display: none;
-  margin-left: 20px;
   background: none;
   border: none;
-  position: relative;
-  top: 2px;
+  height: 60px;
+  width: 60px;
   outline: none;
+  padding: 0;
+  border-radius: 0 10px 10px 0;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  border-left: none;
 
   @media (max-width: 991px) {
-    display: block;
-    margin-left: 10px;
+    order: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .nav-toggle {
@@ -159,6 +246,8 @@ export const NavToggle = styled.button`
     margin: 0;
     overflow: visible;
     outline: none;
+    position: relative;
+    top: 3px;
 
     &.is-active {
       .nav-inner,
@@ -167,49 +256,7 @@ export const NavToggle = styled.button`
         background-color: var(--color__background);
       }
     }
-  }
 
-  .nav-box {
-    width: 32px;
-    height: 24px;
-    display: inline-block;
-    position: relative;
-  }
-
-  .nav-inner {
-    display: block;
-    top: 50%;
-    margin-top: -2px;
-
-    &,
-    &::before,
-    &::after {
-      width: 32px;
-      height: 3px;
-      background-color: #fff;
-      border-radius: 3px;
-      position: absolute;
-      transition-property: transform;
-      transition-duration: 0.15s;
-      transition-timing-function: ease;
-    }
-
-    &::before,
-    &::after {
-      content: '';
-      display: block;
-    }
-
-    &::before {
-      top: -10px;
-    }
-
-    &::after {
-      bottom: -10px;
-    }
-  }
-
-  .nav--spin {
     .nav-inner {
       transition-duration: 0.22s;
       transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
@@ -245,6 +292,49 @@ export const NavToggle = styled.button`
       }
     }
   }
+
+  .nav-box {
+    width: 25px;
+    height: 24px;
+    display: inline-block;
+    position: relative;
+  }
+
+  .nav-inner {
+    display: block;
+    top: 50%;
+    margin-top: -2px;
+
+    &,
+    &::before,
+    &::after {
+      width: 25px;
+      height: 3px;
+      background-color: #fff;
+      border-radius: 3px;
+      position: absolute;
+      transition-property: transform;
+      transition-duration: 0.15s;
+      transition-timing-function: ease;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      display: block;
+    }
+
+    &::before {
+      top: -8px;
+    }
+
+    &::after {
+      bottom: -8px;
+    }
+  }
+
+  .nav--toggle {
+  }
 `
 
 export const Overlay = styled.div`
@@ -263,6 +353,33 @@ export const Overlay = styled.div`
     &.is-active {
       opacity: 1;
       visibility: visible;
+    }
+  }
+`
+
+export const DiscordLink = styled.button`
+  height: 60px;
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px 10px 10px 0;
+  border: 2px inset rgba(255, 255, 255, 0.15);
+  padding: 0;
+  cursor: pointer;
+
+  svg {
+    width: 32px;
+  }
+
+  @media (max-width: 991px) {
+    order: 1;
+    border-radius: 10px 0 0 0;
+
+    &.is-active {
+      svg path {
+        fill: var(--color__background);
+      }
     }
   }
 `

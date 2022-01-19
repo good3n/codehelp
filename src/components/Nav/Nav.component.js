@@ -1,7 +1,14 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
-import { StyledNav, StyledPopup, NavToggle, Overlay } from './Nav.styles'
+import {
+  NavWrap,
+  StyledNav,
+  StyledPopup,
+  NavToggle,
+  Overlay,
+  DiscordLink,
+} from './Nav.styles'
 
 const Nav = ({ navOpen, setNavOpen }) => {
   const activeClass = navOpen ? 'is-active' : ''
@@ -9,7 +16,7 @@ const Nav = ({ navOpen, setNavOpen }) => {
     setNavOpen(!navOpen)
   }
   return (
-    <>
+    <NavWrap>
       <StyledNav className={activeClass}>
         <div className="links">
           <Link
@@ -35,11 +42,13 @@ const Nav = ({ navOpen, setNavOpen }) => {
             </span>
           </Link>
         </div>
+      </StyledNav>
 
-        <StyledPopup
-          closeOnDocumentClick
-          modal
-          trigger={
+      <StyledPopup
+        closeOnDocumentClick
+        modal
+        trigger={
+          <DiscordLink className={activeClass}>
             <svg
               fill="none"
               viewBox="0 0 48 48"
@@ -51,43 +60,42 @@ const Nav = ({ navOpen, setNavOpen }) => {
                 fill="#fff"
               />
             </svg>
-          }
-        >
-          {close => (
+          </DiscordLink>
+        }
+      >
+        {close => (
+          <div>
+            <p>Join the CodeHelp Discord server?</p>
             <div>
-              <p>Join the CodeHelp Discord server?</p>
-              <div>
-                <a
-                  href="https://discord.gg/KntFa9p"
-                  rel="noreferrer noopener"
-                  target="_blank"
-                  title="Join CodeHelp Discord!"
-                >
-                  Yes
-                </a>
-                <button onClick={() => close()} tabIndex="0">
-                  No
-                </button>
-              </div>
-            </div>
-          )}
-        </StyledPopup>
-        <NavToggle className={activeClass} onClick={() => handleClick()}>
-          <div
-            ariaControls="navigation"
-            ariaLabel="Menu"
-            className={`nav-toggle nav--spin ${activeClass}`}
-            role="button"
-            tabIndex="0"
-          >
-            <div className="nav-box">
-              <div className="nav-inner"></div>
+              <a
+                href="https://discord.gg/KntFa9p"
+                rel="noreferrer noopener"
+                target="_blank"
+                title="Join CodeHelp Discord!"
+              >
+                Yes
+              </a>
+              <button onClick={() => close()} tabIndex="0">
+                No
+              </button>
             </div>
           </div>
-        </NavToggle>
-      </StyledNav>
+        )}
+      </StyledPopup>
+      <NavToggle
+        aria-controls="navigation"
+        aria-label="Menu"
+        className={activeClass}
+        onClick={() => handleClick()}
+      >
+        <div className={`nav-toggle ${activeClass}`} role="button" tabIndex="0">
+          <div className="nav-box">
+            <div className="nav-inner"></div>
+          </div>
+        </div>
+      </NavToggle>
       <Overlay className={activeClass} onClick={() => handleClick()} />
-    </>
+    </NavWrap>
   )
 }
 
