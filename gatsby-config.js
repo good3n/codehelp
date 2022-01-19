@@ -79,6 +79,29 @@ module.exports = {
     //   },
     // },
     {
+      /* Include plugin */
+      resolve: 'gatsby-omni-font-loader',
+
+      /* Plugin options */
+      options: {
+        /* Font loading mode */
+        mode: 'async',
+
+        /* Enable font loading listener to handle FOUT */
+        enableListener: true,
+
+        /* Self-hosted fonts config. Add font files and font CSS files to "static" folder */
+        custom: [
+          {
+            /* Exact name of the font as defied in @font-face CSS rule */
+            name: ['Apercu-Mono-Pro'],
+            /* Path to the font CSS file inside the "static" folder with @font-face definition */
+            file: '/assets/fonts/fonts.css',
+          },
+        ],
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `gatsby-codehelp`,
