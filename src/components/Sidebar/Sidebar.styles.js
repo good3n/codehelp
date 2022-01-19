@@ -21,4 +21,8 @@ export const StyledSidebar = styled.aside`
     color: var(--color__green);
     text-decoration: none;
   }
+
+  > div:last-of-type ul {
+    margin-bottom: 0;
+  }
 `

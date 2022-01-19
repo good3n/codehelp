@@ -10,6 +10,7 @@ export const StyledHeader = styled.header`
 
   @media (max-width: 991px) {
     grid-template-columns: 60px 1fr;
+    margin-bottom: 3rem;
   }
 
   > a:first-of-type {
