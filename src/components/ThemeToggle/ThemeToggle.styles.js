@@ -16,7 +16,6 @@ export const StyledButton = styled.button`
 
   @media (max-width: 991px) {
     top: 59px;
-    /* right: 119.5px; */
   }
 
   &.light {

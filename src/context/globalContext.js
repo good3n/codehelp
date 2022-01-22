@@ -7,8 +7,6 @@ export const globalContext = createContext()
 const Provider = ({ children }) => {
   const [theme, setTheme] = useState(`dark`)
 
-  console.log(window.localStorage)
-
   useEffect(() => {
     if (window.localStorage.getItem(`theme`)) {
       setTheme(window.localStorage.getItem("theme"));
