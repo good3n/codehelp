@@ -16,8 +16,9 @@ export const StyledHome = styled.div`
     transform: rotate(13deg);
 
     @media (max-width: 991px) {
-      width: 50px;
-      right: -45px;
+      max-width: 9vw;
+      top: 3%;
+      right: -13%;
     }
   }
 
@@ -26,9 +27,11 @@ export const StyledHome = styled.div`
     color: var(--color__green);
     margin-top: 0;
     letter-spacing: -0.1em;
+    -webkit-text-stroke: 2px ${({ theme: { theme } }) => theme === `dark` ? `transparent` : `var(--color__text)`};
 
     @media (max-width: 991px) {
-      font-size: var(--font-size__h1);
+      font-size: 13.5vw;
+      -webkit-text-stroke: 1.5px ${({ theme: { theme } }) => theme === `dark` ? `transparent` : `var(--color__text)`};
     }
 
     span {
@@ -44,7 +47,7 @@ export const StyledHome = styled.div`
 
   p {
     margin: 0 0 3rem;
-    font-size: var(--font-size__h5);
+    font-size: var(--font-size__h4);
 
     @media (max-width: 991px) {
       font-size: var(--font-size__base);
@@ -52,26 +55,6 @@ export const StyledHome = styled.div`
   }
 
   a {
-    /* background-color: var(--color__purple); */
-    /* color: #fff; */
-    /* padding: 1rem 50px; */
-    /* border-radius: 80px; */
-    /* text-decoration: none; */
-    /* font-weight: bold; */
-    /* transition: background-color 0.2s ease 0.1s; */
-    /* display: inline-flex; */
-    /* align-items: center; */
-    /* justify-content: center; */
-
-    /* @media (max-width: 991px) {
-      padding: var(--font-size__h5) 30px;
-      width: auto;
-    }
-
-    &:hover {
-      background-color: var(--color__green);
-    } */
-
     img {
       width: 32px;
       margin-right: 15px;

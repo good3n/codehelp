@@ -19,7 +19,7 @@ export const StyledFooter = styled.footer`
     display: flex;
     align-items: center;
     margin-left: auto;
-    color: #fff;
+    color: var(--color__text);
     text-decoration: none;
 
     @media (max-width: 991px) {

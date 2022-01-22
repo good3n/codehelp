@@ -7,8 +7,9 @@ export const StyledResource = styled.div`
 `
 
 export const Title = styled.a`
-  color: var(--color__green);
+  color: ${({ theme: { theme } }) => theme === `dark` ? `var(--color__green)` : `var(--color__purple)`};
   text-decoration: none;
+  font-weight: 700;
 
   &:hover {
     text-decoration: underline;
@@ -16,5 +17,5 @@ export const Title = styled.a`
 `
 
 export const Description = styled.p`
-  color: #fff;
+  color: var(--color__text);
 `

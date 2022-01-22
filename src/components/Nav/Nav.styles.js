@@ -15,7 +15,7 @@ export const NavWrap = styled.div`
 export const StyledNav = styled.nav`
   display: flex;
   justify-content: end;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.15);
+  border-bottom: 2px solid var(--color__border);
 
   .links {
     width: 100%;
@@ -24,6 +24,8 @@ export const StyledNav = styled.nav`
 
   &.is-active {
     @media (max-width: 991px) {
+      border-color: rgba(255, 255, 255, 0.15);
+      
       .links {
         display: flex;
         position: absolute;
@@ -36,9 +38,9 @@ export const StyledNav = styled.nav`
 
         a,
         a.is-active {
-          color: var(--color__background);
+          color: #202225;
           font-size: var(--font-size__h5);
-          border-bottom: 3px dashed var(--color__background);
+          border-bottom: 3px dashed #202225;
           width: 100%;
           padding-top: 1rem;
 
@@ -46,7 +48,7 @@ export const StyledNav = styled.nav`
             color: var(--color__green);
 
             span {
-              color: var(--color__background);
+              color: #202225;
             }
           }
         }
@@ -71,7 +73,7 @@ export const StyledNav = styled.nav`
 
   a {
     display: inline-block;
-    color: #fff;
+    color: var(--color__text);
     font-weight: 700;
     margin-right: 30px;
     padding-bottom: 11px;
@@ -87,90 +89,6 @@ export const StyledNav = styled.nav`
   span {
     display: none;
   }
-
-  /* @media (max-width: 991px) {
-    &:not(.is-active) {
-      .links {
-        opacity: 0;
-        visibility: hidden;
-      }
-    }
-
-    &.is-active {
-      svg path {
-        fill: var(--color__background);
-      }
-    }
-  }
-
-  .links {
-    display: flex;
-
-    span {
-      display: none;
-    }
-
-    @media (max-width: 991px) {
-      display: flex;
-      position: absolute;
-      top: 8rem;
-      left: 0;
-      right: 0;
-      flex-direction: column;
-      opacity: 1;
-      visibility: visible;
-
-      a,
-      a.is-active {
-        color: var(--color__background);
-        font-size: var(--font-size__h5);
-        border-bottom: 3px dashed var(--color__background);
-        width: 100%;
-
-        &:hover {
-          color: var(--color__green);
-
-          span {
-            color: var(--color__background);
-          }
-        }
-      }
-
-      span {
-        display: block;
-        font-size: var(--font-size__small);
-        margin-bottom: 1rem;
-      }
-    }
-  }
-
-  a {
-    display: block;
-    margin: 0;
-    font-weight: 600;
-    position: relative;
-    margin-right: 30px;
-    color: #fff;
-    text-decoration: none;
-
-    @media (max-width: 991px) {
-      margin-right: 0;
-      margin-bottom: 10px;
-    }
-
-    &.is-active {
-      color: var(--color__purple);
-    }
-  }
-
-  svg {
-    width: 32px;
-    cursor: pointer;
-
-    @media (max-width: 991px) {
-      margin-left: auto;
-    }
-  } */
 `
 
 export const StyledPopup = styled(Popup)`
@@ -179,7 +97,7 @@ export const StyledPopup = styled(Popup)`
   }
 
   &-content {
-    background: var(--color__background);
+    background: #202225;
     border-radius: 10px;
     padding: var(--font-size__h3);
     font-size: 1rem;
@@ -187,6 +105,7 @@ export const StyledPopup = styled(Popup)`
     p {
       margin: 0;
       font-weight: bold;
+      color: #fff;
 
       + div {
         margin-top: 1rem;
@@ -225,7 +144,7 @@ export const NavToggle = styled.button`
   outline: none;
   padding: 0;
   border-radius: 0 10px 10px 0;
-  border: 2px solid rgba(255, 255, 255, 0.15);
+  border: 2px solid var(--color__border);
   border-left: none;
 
   @media (max-width: 991px) {
@@ -233,6 +152,10 @@ export const NavToggle = styled.button`
     display: flex;
     align-items: center;
     justify-content: center;
+
+    &.is-active {
+      border-color: rgba(255, 255, 255, 0.15);
+    }
   }
 
   .nav-toggle {
@@ -252,7 +175,7 @@ export const NavToggle = styled.button`
       .nav-inner,
       .nav-inner::before,
       .nav-inner::after {
-        background-color: var(--color__background);
+        background-color: #202225;
       }
     }
 
@@ -309,7 +232,7 @@ export const NavToggle = styled.button`
     &::after {
       width: 25px;
       height: 3px;
-      background-color: #fff;
+      background-color: ${({ theme: { theme } }) => theme === `dark` ? `#fff` : `#202225`};
       border-radius: 3px;
       position: absolute;
       transition-property: transform;
@@ -363,9 +286,10 @@ export const DiscordLink = styled.button`
   align-items: center;
   justify-content: center;
   border-radius: 10px 10px 10px 0;
-  border: 2px inset rgba(255, 255, 255, 0.15);
+  border: 2px solid inset solid solid ${({ theme: { theme } }) => theme === `dark` ? `#fff` : `#000`};
   padding: 0;
   cursor: pointer;
+  z-index: 1;
 
   svg {
     width: 32px;
@@ -376,8 +300,10 @@ export const DiscordLink = styled.button`
     border-radius: 10px 0 0 0;
 
     &.is-active {
+      border-color: rgba(255, 255, 255, 0.15) !important;
+
       svg path {
-        fill: var(--color__background);
+        fill: #202225;
       }
     }
   }

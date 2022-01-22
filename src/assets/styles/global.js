@@ -2,19 +2,22 @@ import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
   :root {
-    --color__background: #202225;
+    --color__background: ${({ theme: { theme } }) => theme === `dark` ? `#202225` : `#fff`};
+    --color__text: ${({ theme: { theme } }) => theme === `dark` ? `#fff` : `#202225`};
+    --color__border: ${({ theme: { theme } }) => theme === `dark` ? `rgba(255, 255, 255, 0.15)` : `var(--color__text)`};
     --color__green: #4fd8c3;
     --color__purple: #5e7ce7;
+    --color__gray: #ECF2FC;
 
     /* font sizes */
     --font-size__h0: 7.451rem;
-    --font-size__h1: 3.815rem;
-    --font-size__h2: 3.052rem;
-    --font-size__h3: 2.441rem;
-    --font-size__h4: 1.953rem;
-    --font-size__h5: 1.563rem;
+    --font-size__h1: 2.488rem;
+    --font-size__h2: 2.074rem;
+    --font-size__h3: 1.728rem;
+    --font-size__h4: 1.44rem;
+    --font-size__h5: 1.2rem;
     --font-size__base: 1rem;
-    --font-size__small: 0.8rem;
+    --font-size__small: 0.833rem;
   }
 
   ::-moz-selection {
@@ -45,7 +48,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Apercu-Mono-Pro';
     font-size: var(--font-size__base);
     background-color: var(--color__background);
-    color: #fff;
+    color: var(--color__text);
     line-height: 1.75;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -104,7 +107,7 @@ const GlobalStyle = createGlobalStyle`
     line-height: 1;
     color: #fff;
     background-color: var(--color__purple);
-    border: 2px solid var(--color__purple);
+    border: 2px solid var(--color__border);
     font-weight: 700;
     display: inline-flex;
     align-items: center;
@@ -128,10 +131,12 @@ const GlobalStyle = createGlobalStyle`
       transition: all .3s ease-in-out;
     }
 
-    &:hover {
-      &::before {
-        width: 200%;
-        left: -5%;
+    @media (min-width: 992px) {
+      &:hover {
+        &::before {
+          width: 200%;
+          left: -5%;
+        }
       }
     }
 
