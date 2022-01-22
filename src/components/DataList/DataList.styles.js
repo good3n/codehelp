@@ -8,15 +8,15 @@ export const StyledDataList = styled.div`
   h2 {
     margin: 0;
     padding-bottom: 1rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-    font-size: var(--font-size__h5);
+    border-bottom: 2px solid var(--color__border);
+    font-size: var(--font-size__h4);
   }
 
   h3 {
     border-bottom: 3px dashed;
     display: inline-block;
-    font-size: var(--font-size__base);
-    border-color: var(--color__purple);
+    font-size: var(--font-size__h5);
+    border-color: ${({ theme: { theme } }) => theme === `dark` ? `var(--color__purple)` : `var(--color__green)`};
     padding-bottom: 5px;
     margin: 2rem 0 1rem;
 

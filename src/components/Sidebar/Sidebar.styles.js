@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 
 export const StyledSidebar = styled.aside`
-  border: 2px solid rgba(255, 255, 255, 0.15);
+  border: 2px solid var(--color__border);
+  background-color: ${({ theme: { theme } }) => theme === `dark` ? `transparent` : `var(--color__gray)`};
   padding: 3rem 30px;
   border-radius: 10px;
 
@@ -22,7 +23,7 @@ export const StyledSidebar = styled.aside`
   }
 
   a {
-    color: var(--color__green);
+    color: ${({ theme: { theme } }) => theme === `dark` ? `var(--color__green);` : `var(--color__text)`};
 
     &:hover {
       text-decoration: underline;
