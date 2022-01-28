@@ -4,6 +4,7 @@ import Layout from '../components/Layout'
 import Seo from '../components/Seo'
 import { StyledHome } from '../assets/styles/pages/Index.styles'
 import discordIcon from '../assets/images/icon-discord.svg'
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 const IndexPage = () => (
   <Layout>
@@ -27,7 +28,7 @@ const IndexPage = () => (
         fun, helpful group where people can get the development and programming
         support they need.
       </p>
-      <a
+      <OutboundLink
         className="button"
         href="https://discord.gg/KntFa9p"
         rel="noreferrer noopener"
@@ -38,7 +39,7 @@ const IndexPage = () => (
           <img alt="Discord Icon" src={discordIcon} />
           Join CodeHelp
         </span>
-      </a>
+      </OutboundLink>
     </StyledHome>
   </Layout>
 )

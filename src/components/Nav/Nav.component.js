@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 import {
   NavWrap,
   StyledNav,
@@ -67,14 +68,14 @@ const Nav = ({ navOpen, setNavOpen }) => {
           <div>
             <p>Join the CodeHelp Discord server?</p>
             <div>
-              <a
+              <OutboundLink
                 href="https://discord.gg/KntFa9p"
                 rel="noreferrer noopener"
                 target="_blank"
                 title="Join CodeHelp Discord!"
               >
                 Yes
-              </a>
+              </OutboundLink>
               <button onClick={() => close()} tabIndex="0">
                 No
               </button>
