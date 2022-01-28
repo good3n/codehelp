@@ -4,7 +4,7 @@ import Layout from '../components/Layout'
 import Seo from '../components/Seo'
 import { StyledHome } from '../assets/styles/pages/Index.styles'
 import discordIcon from '../assets/images/icon-discord.svg'
-import { OutboundLink } from "gatsby-plugin-google-analytics"
+import { trackCustomEvent } from "gatsby-plugin-google-analytics"
 
 const IndexPage = () => (
   <Layout>
@@ -28,18 +28,25 @@ const IndexPage = () => (
         fun, helpful group where people can get the development and programming
         support they need.
       </p>
-      <OutboundLink
+      <a
         className="button"
         href="https://discord.gg/KntFa9p"
         rel="noreferrer noopener"
         target="_blank"
         title="Join CodeHelp Discord!"
+        onClick={() => {
+          trackCustomEvent({
+            category: "Discord Link",
+            action: "Click",
+            label: "Home",
+          })
+        }}
       >
         <span>
           <img alt="Discord Icon" src={discordIcon} />
           Join CodeHelp
         </span>
-      </OutboundLink>
+      </a>
     </StyledHome>
   </Layout>
 )

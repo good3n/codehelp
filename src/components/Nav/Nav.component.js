@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
-import { OutboundLink } from "gatsby-plugin-google-analytics"
+import { trackCustomEvent } from "gatsby-plugin-google-analytics"
 import {
   NavWrap,
   StyledNav,
@@ -68,14 +68,21 @@ const Nav = ({ navOpen, setNavOpen }) => {
           <div>
             <p>Join the CodeHelp Discord server?</p>
             <div>
-              <OutboundLink
+              <a
                 href="https://discord.gg/KntFa9p"
                 rel="noreferrer noopener"
                 target="_blank"
                 title="Join CodeHelp Discord!"
+                onClick={() => {
+                  trackCustomEvent({
+                    category: "Discord Link",
+                    action: "Click",
+                    label: "Navigation",
+                  })
+                }}
               >
                 Yes
-              </OutboundLink>
+              </a>
               <button onClick={() => close()} tabIndex="0">
                 No
               </button>
