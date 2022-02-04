@@ -53,6 +53,24 @@
                   "name": "CSS Combinators",
                   "description": "Combinators are used to combine CSS selectors to create more complex selectors.",
                   "link": "https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators"
+                },
+                {
+                  "id": "css-diner",
+                  "name": "CSS Diner (Game)",
+                  "description": "A game to help you learn and practice CSS selectors.",
+                  "link": "https://flexboxfroggy.com/"
+                },
+                {
+                  "id": "flexbox-froggy",
+                  "name": "Flexbox Froggy (Game)",
+                  "description": "A game for learning CSS flexbox.",
+                  "link": "https://flexboxfroggy.com/"
+                },
+                {
+                  "id": "grid-garden",
+                  "name": "Grid Garden (Game)",
+                  "description": "A game for learning CSS grid layout.",
+                  "link": "https://cssgridgarden.com/"
                 }
               ]
             }
