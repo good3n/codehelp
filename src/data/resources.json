@@ -303,6 +303,12 @@
                   "name": "Learn CS in 1000 Videos",
                   "description": "An entire Computer Science curriculum using only YouTube videos.",
                   "link": "https://laconicml.com/computer-science-curriculum-youtube-videos/"
+                },
+                {
+                  "id": "open-source-society-university-computer-science",
+                  "name": "Open Source Society University Computer Science Curriculum",
+                  "description": "The OSSU curriculum is a free and complete education in computer science using online materials.",
+                  "link": "https://github.com/ossu/computer-science#contents"
                 }
               ]
             }
