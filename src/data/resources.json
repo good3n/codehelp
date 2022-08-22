@@ -385,6 +385,12 @@
                   "link": "https://www.youtube.com/c/Freecodecamp/"
                 },
                 {
+                  "id": "fireship",
+                  "name": "Fireship.io",
+                  "description": "High-intensity coding tutorials.",
+                  "link": "https://www.youtube.com/c/Fireship"
+                },    
+                {
                   "id": "traversy-media",
                   "name": "Traversy Media",
                   "description": "Traversy Media features web development and programming tutorials for web technologies including Node.js, Angular 2, React.js, PHP, Rails, HTML, CSS and more.",
