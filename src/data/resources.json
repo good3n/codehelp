@@ -127,10 +127,10 @@
               "name": "React",
               "resources": [
                 {
-                  "id": "gatsby",
-                  "name": "Gatsby",
-                  "description": "Gatsby is a React-based open source framework for creating websites and apps.",
-                  "link": "https://www.gatsbyjs.com/"
+                  "id": "astro",
+                  "name": "Astro",
+                  "description": "Astro powers the world's fastest websites, client-side web apps, dynamic API endpoints, and everything in-between.",
+                  "link": "https://astro.build/"
                 },
                 {
                   "id": "nextjs",
