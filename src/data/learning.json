@@ -112,13 +112,25 @@
           {
             "category": {
               "id": "react",
-              "name": "React (Coming soon)",
+              "name": "React",
               "resources": [
                 {
-                  "id": "",
-                  "name": "",
-                  "description": "",
-                  "link": ""
+                  "id": "react-docs",
+                  "name": "React Docs",
+                  "description": "The official React documentation for modern React concepts, components, hooks, and patterns.",
+                  "link": "https://react.dev/"
+                },
+                {
+                  "id": "epic-react",
+                  "name": "Epic React",
+                  "description": "A deeply practical React learning resource from Kent C. Dodds focused on real-world React skills.",
+                  "link": "https://www.epicreact.dev/"
+                },
+                {
+                  "id": "react-beta-patterns",
+                  "name": "Beta React docs — Learn React",
+                  "description": "A great place to learn the current React mental model straight from the official docs.",
+                  "link": "https://react.dev/learn"
                 }
               ]
             }
@@ -126,13 +138,109 @@
           {
             "category": {
               "id": "typescript",
-              "name": "Typescript (Coming soon)",
+              "name": "TypeScript",
               "resources": [
                 {
-                  "id": "",
-                  "name": "",
-                  "description": "",
-                  "link": ""
+                  "id": "typescript-docs",
+                  "name": "TypeScript Documentation",
+                  "description": "The official TypeScript docs covering language basics, advanced types, tooling, and tsconfig guidance.",
+                  "link": "https://www.typescriptlang.org/docs/"
+                },
+                {
+                  "id": "total-typescript",
+                  "name": "Total TypeScript",
+                  "description": "A respected modern TypeScript learning resource with practical tutorials, exercises, and deep dives.",
+                  "link": "https://www.totaltypescript.com/"
+                },
+                {
+                  "id": "ts-for-js-devs",
+                  "name": "TypeScript for JavaScript Programmers",
+                  "description": "The official TypeScript guide for developers coming from JavaScript.",
+                  "link": "https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": {
+        "id": "ai",
+        "name": "AI",
+        "categories": [
+          {
+            "category": {
+              "id": "prompting-model-usage",
+              "name": "Prompting & Model Usage",
+              "resources": [
+                {
+                  "id": "openai-prompting",
+                  "name": "OpenAI Prompt Engineering",
+                  "description": "Practical prompting guides and best practices directly from OpenAI.",
+                  "link": "https://platform.openai.com/docs/guides/prompt-engineering"
+                },
+                {
+                  "id": "anthropic-learn",
+                  "name": "Anthropic Learn",
+                  "description": "Anthropic's learning hub covering Claude prompting, workflows, and practical usage patterns.",
+                  "link": "https://www.anthropic.com/learn"
+                },
+                {
+                  "id": "anthropic-prompting-interactive",
+                  "name": "Anthropic — Prompting Interactive Tutorial",
+                  "description": "An interactive tutorial for learning strong prompt design patterns with Claude.",
+                  "link": "https://github.com/anthropics/courses/tree/master/prompt_engineering_interactive_tutorial"
+                },
+                {
+                  "id": "gemini-prompting",
+                  "name": "Gemini Prompting Strategies",
+                  "description": "Google's guidance for prompting Gemini effectively across different tasks.",
+                  "link": "https://ai.google.dev/gemini-api/docs/prompting-strategies"
+                },
+                {
+                  "id": "hugging-face-learn",
+                  "name": "Hugging Face Learn",
+                  "description": "A broad set of AI and ML learning resources spanning models, tasks, and practical workflows.",
+                  "link": "https://huggingface.co/learn"
+                }
+              ]
+            }
+          },
+          {
+            "category": {
+              "id": "ai-development",
+              "name": "AI Development",
+              "resources": [
+                {
+                  "id": "openai-docs",
+                  "name": "OpenAI Developer Docs",
+                  "description": "Official OpenAI API docs for building applications with models, tools, and structured outputs.",
+                  "link": "https://platform.openai.com/docs/overview"
+                },
+                {
+                  "id": "vercel-ai-sdk-docs",
+                  "name": "Vercel AI SDK",
+                  "description": "A practical SDK for building AI features into modern web apps with strong framework support.",
+                  "link": "https://sdk.vercel.ai/docs"
+                },
+                {
+                  "id": "model-context-protocol",
+                  "name": "Model Context Protocol",
+                  "description": "The MCP spec and docs for connecting models to tools, files, and external systems.",
+                  "link": "https://modelcontextprotocol.io/introduction"
+                },
+                {
+                  "id": "langchain-docs",
+                  "name": "LangChain Docs",
+                  "description": "Documentation for building LLM-powered applications, workflows, and agents.",
+                  "link": "https://python.langchain.com/docs/introduction/"
+                },
+                {
+                  "id": "llamaindex-docs",
+                  "name": "LlamaIndex Docs",
+                  "description": "A framework for connecting LLMs with external data and building retrieval-based applications.",
+                  "link": "https://docs.llamaindex.ai/"
                 }
               ]
             }
