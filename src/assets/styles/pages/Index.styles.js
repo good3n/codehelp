@@ -9,19 +9,6 @@ export const StyledHome = styled.div`
     display: inline-flex;
   }
 
-  .gatsby-image-wrapper {
-    position: absolute;
-    top: 0;
-    right: -85px;
-    transform: rotate(13deg);
-
-    @media (max-width: 991px) {
-      max-width: 9vw;
-      top: 3%;
-      right: -13%;
-    }
-  }
-
   h1 {
     font-size: var(--font-size__h0);
     color: var(--color__green);

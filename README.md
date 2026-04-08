@@ -1,6 +1,6 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/9e534487-a699-4fac-b2c8-c4d607915ec2/deploy-status)](https://app.netlify.com/sites/infallible-haibt-f24d3a/deploys)
 
-# 🤖 CodeHelp Website
+# CodeHelp Website
 
 ## About
 
@@ -9,20 +9,21 @@ The official repository for [CodeHelp.io](https://codehelp.io). This will be a c
 ## Dependencies
 
 - NPM
-- Gatsby CLI
+- Node.js v20+
 
 ## Setup
 
 1. Clone the repository. Run `git clone https://github.com/good3n/codehelp.git`
 2. Navigate to repository via `cd codehelp` and install the node packages with `npm install`
-3. Start the Gatsby development environment with `gatsby develop`
-4. Open your browser and go to `localhost:8000`
-5. Happy coding 🤖
+3. Start the Astro development server with `npm run dev`
+4. Open your browser and go to `localhost:4321`
+5. Happy coding
 
 ## Structure
 
-- All pages are inside of the `pages/` directory.
-- All components are inside of the `components/` directory.
+- All pages are inside of the `src/pages/` directory.
+- All components are inside of the `src/components/` directory.
+- All data is inside of the `src/data/` directory.
 
 ## Pull request guidelines
 

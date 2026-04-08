@@ -4,24 +4,24 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-**CodeHelp** is a Gatsby v4-based static site generator serving as a community-driven resource portal (codehelp.io). It aggregates curated links for developers, designers, and marketers across learning materials and development tools.
+**CodeHelp** is an Astro-based static site serving as a community-driven resource portal (codehelp.io). It aggregates curated links for developers, designers, and marketers across learning materials and development tools.
 
-- **Framework**: Gatsby v4.5.2
-- **Language**: JavaScript/React v17
-- **Styling**: styled-components (CSS-in-JS)
-- **Deployment**: Netlify (automatic on git push)
-- **State Management**: React Context API (theme/dark mode)
+- **Framework**: Astro 5 with React 18 integration
+- **Language**: JavaScript/JSX (Astro components + React islands)
+- **Styling**: CSS (global) + styled-components (legacy page styles)
+- **State Management**: nanostores (theme/dark mode)
+- **Deployment**: Netlify (automatic on git push to master)
+- **Node**: v20+ (set in `.nvmrc` and `netlify.toml`)
 
 ## Common Development Commands
 
 | Command | Purpose |
 |---------|---------|
-| `npm start` or `npm run develop` | Start dev server on localhost:8000 with hot reload |
-| `npm run build` | Build production-optimized site to `/public` |
-| `npm run serve` | Serve the built site locally for testing |
-| `npm run clean` | Clear Gatsby cache and build artifacts |
+| `npm run dev` | Start Astro dev server on localhost:4321 with hot reload |
+| `npm run build` | Build production site to `/dist` |
+| `npm run preview` | Serve the built site locally for testing |
+| `npm run clean` | Remove `dist` and `.astro` cache directories |
 | `npm run format` | Format all code with Prettier (2-space, single quotes) |
-| `npm run test` | Currently not implemented—echo stub only |
 
 ## Architecture & Code Structure
 
@@ -29,49 +29,60 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ```
 src/
-├── pages/              # File-based routing (auto-creates routes)
-│   ├── index.js       # Homepage (/)
-│   ├── learning.js    # /learning resources page
-│   ├── resources.js   # /resources development tools page
-│   └── 404.js         # Not found page
+├── pages/              # File-based routing (Astro auto-creates routes)
+│   ├── index.astro    # Homepage (/)
+│   ├── learning.astro # /learning resources page
+│   ├── resources.astro # /resources development tools page
+│   └── 404.astro      # Not found page
 │
-├── components/         # Reusable React components
-│   ├── Layout.js      # Main wrapper (contains globalContext Provider via gatsby-browser.js)
-│   ├── Header/        # Logo and navigation
-│   ├── Nav/           # Main nav links + Discord popup modal
-│   ├── Footer/        # Footer with links
-│   ├── Sidebar/       # Category navigation with anchor links
-│   ├── DataList/      # Maps data array → Resource cards
-│   ├── Resource/      # Individual resource card component
-│   ├── ThemeToggle/   # Dark/light mode switcher
-│   └── Seo.js         # react-helmet wrapper for head management
+├── layouts/
+│   └── Layout.astro   # Main HTML wrapper (head, analytics, theme script)
 │
-├── context/           # React Context for state
-│   └── globalContext.js  # Theme state (dark/light), persists to localStorage
+├── components/         # Reusable components (dual Astro + JSX pattern)
+│   ├── Header/        # Logo and navigation (.astro + .jsx)
+│   ├── Nav/           # Main nav links + Discord popup modal (.jsx only)
+│   ├── Footer/        # Footer with links (.astro + .jsx)
+│   ├── Sidebar/       # Category navigation with anchor links (.astro + .jsx)
+│   ├── DataList/      # Maps data array -> Resource cards (.astro + .jsx)
+│   ├── Resource/      # Individual resource card (.astro + .jsx)
+│   ├── PageTitle/     # Page heading component (.astro + .jsx)
+│   └── ThemeToggle/   # Dark/light mode switcher (.jsx only)
 │
-├── hooks/
-│   └── useWindowSize.js  # Track window dimensions for responsive design
+├── stores/
+│   └── themeStore.js  # nanostores atom for theme state, syncs to localStorage
+│
+├── utils/
+│   └── theme-script.js # Inline script to prevent FOUC on page load
 │
 ├── data/              # Static JSON data (no database)
-│   ├── resources.json  # Development tools/frameworks organized by category
-│   └── learning.json   # Learning materials organized by category
+│   ├── resources.json # Development tools/frameworks organized by category
+│   └── learning.json  # Learning materials organized by category
 │
-├── assets/            # Static files
-│   ├── styles/        # Global + component-level styles
-│   ├── fonts/         # Custom fonts (Apercu-Mono-Pro)
-│   └── images/        # PNG, SVG assets
+├── styles/            # Global CSS
+│   ├── global.css     # Theme variables, layout, typography
+│   ├── normalize.css  # CSS reset
+│   └── fonts.css      # Custom font declarations (Apercu Mono Pro)
 │
-└── pages/ + components/ → Rendered via Layout wrapper → Theme provider
+└── assets/            # Static files
+    ├── styles/        # Legacy styled-components page styles
+    ├── fonts/         # Custom font files (.woff, .woff2)
+    └── images/        # PNG, SVG assets
 ```
+
+### Component Pattern
+
+Most components have dual implementations:
+- `.component.astro` — server-rendered Astro component (preferred for static content)
+- `.component.jsx` — React component (used for interactive islands like Nav, ThemeToggle)
 
 ### Data Flow & Structure
 
 **Page rendering**:
-1. Pages (`resources.js`, `learning.js`) import static JSON from `src/data/`
+1. Pages (`.astro`) import static JSON from `src/data/`
 2. Pass data to `Sidebar` (category filters) and `DataList` (resource cards)
 3. Sidebar renders anchor links for category navigation
-4. DataList maps array → Resource components (individual cards)
-5. All styled with styled-components, theme-aware via Context
+4. DataList maps array -> Resource components (individual cards)
+5. Layout.astro wraps all pages with head metadata, analytics, and theme initialization
 
 **Data shape** (JSON structure):
 ```javascript
@@ -104,50 +115,44 @@ src/
 
 ### Styling Architecture
 
-- **CSS-in-JS** via styled-components
-- **Theme variables** defined in `src/assets/styles/` (e.g., `--color__background`, `--color__text`)
-- **Global styles** wrap all components with theme-aware colors
-- **Component styles**: Each component has a `.styles.js` file (e.g., `Header.styles.js`)
-- **Responsive design**: CSS media queries in component styles
+- **Global CSS** in `src/styles/global.css` with CSS custom properties (`--color__background`, `--color__text`, etc.)
+- **Theme** controlled via `data-theme` attribute on `<html>` element
+- **Legacy styled-components** in `src/assets/styles/pages/` for page-level styles
+- **Responsive design**: CSS media queries
 
 ### State Management
 
-**Global Theme**:
-- Stored in `src/context/globalContext.js` (React Context)
-- Wrapped around entire app in `gatsby-browser.js`
-- Persists theme choice to localStorage
-- Switch via ThemeToggle component
+**Theme (nanostores)**:
+- Defined in `src/stores/themeStore.js` using nanostores `atom`
+- Persists to localStorage, syncs to `document.documentElement.dataset.theme`
+- React components access via `@nanostores/react` (`useStore`)
+- FOUC prevention via inline script in Layout.astro (`src/utils/theme-script.js`)
 
-### Key Plugins & Features
+### Integrations (astro.config.mjs)
 
-| Plugin | Purpose |
-|--------|---------|
-| gatsby-plugin-google-analytics | Google Analytics tracking (trackEvent on Discord clicks) |
-| gatsby-plugin-image/sharp | Optimized image handling and processing |
-| gatsby-plugin-styled-components | styled-components integration |
-| gatsby-plugin-anchor-links | Smooth anchor navigation for sidebar categories |
-| gatsby-plugin-manifest | PWA manifest for installability |
-| gatsby-plugin-offline | Service worker for offline PWA support |
-| gatsby-plugin-react-helmet | Head tag management via react-helmet |
+| Integration | Purpose |
+|-------------|---------|
+| `@astrojs/react` | React component islands |
+| `@astrojs/sitemap` | Auto-generated sitemap.xml |
+| `@astrojs/partytown` | Google Analytics in web worker (off main thread) |
 
 ## Important Config Files
 
 | File | Notes |
 |------|-------|
-| `gatsby-config.js` | Plugin setup, site metadata, Google Analytics ID, PWA manifest |
-| `gatsby-browser.js` | Wraps app with globalContext Provider for theme state |
+| `astro.config.mjs` | Integrations, site URL, image service, static output |
+| `.nvmrc` | Node version (v20) |
 | `.prettierrc` | Enforce 2-space indentation, single quotes, no semicolons, trailing commas |
-| `.eslintrc` | Airbnb config + React/JSX/a11y plugins |
-| `netlify.toml` | Netlify deployment (auto-builds on git push) |
-| `.env.development/.env.production` | Google Analytics ID (GOOGLE_ANALYTICS_ID) |
+| `.eslintrc` | ESLint configuration |
+| `netlify.toml` | Build command, publish dir (`dist`), Node version, redirects |
+| `.env.development/.env.production` | Google Analytics ID (`PUBLIC_GA_ID`) |
 
 ## Code Patterns & Conventions
 
 ### Component Structure
-- Functional components with hooks
-- styled-components for component styles
-- PropTypes for prop validation
-- File structure: `ComponentName.js` + `ComponentName.styles.js`
+- Astro components for static content, React for interactivity
+- styled-components for legacy page styles (in `src/assets/styles/pages/`)
+- File naming: `ComponentName.component.astro` / `ComponentName.component.jsx`
 
 ### Comments
 
@@ -155,56 +160,54 @@ src/
 - Write comments declaratively and directly, like a commit message
 - Focus on the "why" rather than obvious "what"
 - Examples:
-  - ✓ `// toggle dark mode theme in localStorage`
-  - ✗ `// This toggles the dark mode theme in localStorage`
-  - ✓ `// map categories to sidebar navigation links`
-  - ✗ `// Map categories to sidebar navigation links`
+  - `// toggle dark mode theme in localStorage`
+  - `// map categories to sidebar navigation links`
 
 ### Adding a New Resource/Learning Item
 1. Edit `src/data/resources.json` or `src/data/learning.json`
 2. Follow existing category/resource structure
-3. Run `npm start` to see changes (hot reload works)
-4. No build or deployment needed for local testing
+3. Run `npm run dev` to see changes (hot reload works)
 
 ### Adding a New Page
-1. Create `.js` file in `src/pages/` (Gatsby auto-routes)
-2. Export React component with Layout wrapper
-3. Use Seo component for head metadata
-4. Styling via styled-components
+1. Create `.astro` file in `src/pages/` (Astro auto-routes by filename)
+2. Import and use `Layout.astro` as the wrapper
+3. Pass `title` and `description` props to Layout for head metadata
 
 ### Theme-Aware Styling
-```javascript
-import { useContext } from 'react'
-import { GlobalContext } from '../context/globalContext'
+```css
+/* use CSS custom properties that change with data-theme */
+.my-element {
+  background: var(--color__background);
+  color: var(--color__text);
+}
+```
+
+```jsx
+// react components can read theme from nanostores
+import { useStore } from '@nanostores/react'
+import { themeStore } from '../stores/themeStore'
 
 const MyComponent = () => {
-  const { theme } = useContext(GlobalContext)
-
-  return styled.div`
-    background: var(--color__background);
-    color: var(--color__text);
-  `
+  const theme = useStore(themeStore)
+  // ...
 }
 ```
 
 ## Deployment & Build Process
 
-- **Dev**: `npm start` → localhost:8000
-- **Production**: `npm run build` → outputs `/public/` with optimized assets
-- **Netlify**: Auto-detects gatsby-config.js, builds and deploys on git push to master
+- **Dev**: `npm run dev` -> localhost:4321
+- **Production**: `npm run build` -> outputs `/dist` with static assets
+- **Netlify**: Builds and deploys on git push to master
 - **Live site**: https://codehelp.io
 
 ## Linting & Formatting
 
-- **ESLint**: Airbnb config enforces style rules
+- **ESLint**: Configured via `.eslintrc`
 - **Prettier**: Auto-format with `npm run format`
-- Pre-commit hooks: None currently configured (consider adding)
 
-## Notes for Future Development
+## Notes
 
-- Data is static JSON—no database or API backend
-- Theme switching is client-side only (Context + localStorage)
-- Analytics tracked on Discord link clicks (see Nav component)
-- Accessibility plugins enabled (jsx-a11y, manifest)
-- PWA support enabled (installable, offline fallback)
-- No automated tests currently—test suite commented in package.json
+- Data is static JSON — no database or API backend
+- Theme switching is client-side only (nanostores + localStorage)
+- Analytics via Google Analytics loaded through Partytown (web worker)
+- Static output mode (`output: 'static'` in astro.config.mjs)
