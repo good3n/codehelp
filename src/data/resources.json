@@ -15,6 +15,18 @@
                   "name": "Developer Roadmaps",
                   "description": "Step by step guides and paths to learn different tools or technologies.",
                   "link": "https://roadmap.sh/"
+                },
+                {
+                  "id": "w3c",
+                  "name": "W3C",
+                  "description": "Official web standards, specifications, and guidance from the World Wide Web Consortium.",
+                  "link": "https://www.w3.org/"
+                },
+                {
+                  "id": "frontend-fyi",
+                  "name": "Frontend FYI",
+                  "description": "A strong collection of frontend articles, links, and references for modern web development.",
+                  "link": "https://frontendfyi.com/"
                 }
               ]
             }
@@ -37,6 +49,12 @@
                   "name": "SVGOMG",
                   "description": "SVGOMG is SVGO's Missing GUI, aiming to expose the majority, if not all the configuration options of SVGO.",
                   "link": "https://jakearchibald.github.io/svgomg/"
+                },
+                {
+                  "id": "svgo",
+                  "name": "SVGO",
+                  "description": "A Node.js-based tool for optimizing SVG vector graphics files.",
+                  "link": "https://svgo.dev/"
                 }
               ]
             }
@@ -47,16 +65,22 @@
               "name": "CSS",
               "resources": [
                 {
-                  "id": "sass",
-                  "name": "Sass",
-                  "description": "Sass is the most mature, stable, and powerful professional grade CSS extension language in the world.",
-                  "link": "https://sass-lang.com/"
-                },
-                {
                   "id": "tailwindcss",
                   "name": "Tailwind CSS",
                   "description": "Tailwind CSS is a highly customizable, low-level CSS framework that gives you all of the building blocks you need to build bespoke designs without any annoying opinionated styles you have to fight to override.",
                   "link": "https://tailwindcss.com/"
+                },
+                {
+                  "id": "open-props",
+                  "name": "Open Props",
+                  "description": "A set of CSS custom properties to help build consistent, modern interfaces faster.",
+                  "link": "https://open-props.style/"
+                },
+                {
+                  "id": "utopia",
+                  "name": "Utopia",
+                  "description": "Fluid type and space calculators for creating responsive design systems.",
+                  "link": "https://utopia.fyi/"
                 }
               ]
             }
@@ -67,34 +91,40 @@
               "name": "JavaScript",
               "resources": [
                 {
-                  "id": "es6-tour",
-                  "name": "A Quick Tour of ES6 (Or, The Bits You'll Actually Use)",
-                  "description": "ES6 has been getting a lot of press lately. And with all of the benefits that the new syntax and built-ins bring, it damn well should.",
-                  "link": "http://jamesknelson.com/es6-the-bits-youll-actually-use/"
-                },
-                {
-                  "id": "es6-overview",
-                  "name": "ES6 Overview in 350 Bullet Points",
-                  "description": "I heard you like bullet points, so I made an article containing hundreds of those bad boys.",
-                  "link": "https://ponyfoo.com/articles/es6"
-                },
-                {
                   "id": "javascript30",
                   "name": "JavaScript30",
                   "description": "Build 30 things with vanilla JS in 30 days with 30 tutorials.",
                   "link": "https://javascript30.com/"
                 },
                 {
-                  "id": "jamstack",
-                  "name": "Jamstack",
-                  "description": "Comprehensive guide for building Jamstack sites and home of the global Jamstack community.",
-                  "link": "https://jamstack.org/"
-                },
-                {
                   "id": "bundlephobia",
                   "name": "Bundlephobia",
                   "description": "Find the cost of adding a npm package to your bundle.",
                   "link": "https://bundlephobia.com/"
+                },
+                {
+                  "id": "typescriptlang",
+                  "name": "TypeScript",
+                  "description": "JavaScript with syntax for types and strong tooling support.",
+                  "link": "https://www.typescriptlang.org/"
+                },
+                {
+                  "id": "typescript-eslint",
+                  "name": "typescript-eslint",
+                  "description": "Tooling that enables ESLint and TypeScript to work together cleanly in modern projects.",
+                  "link": "https://typescript-eslint.io/"
+                },
+                {
+                  "id": "zod",
+                  "name": "Zod",
+                  "description": "A TypeScript-first schema validation library with static type inference.",
+                  "link": "https://zod.dev/"
+                },
+                {
+                  "id": "esmsh",
+                  "name": "esm.sh",
+                  "description": "A fast CDN for modern JavaScript modules that works especially well with ESM-based workflows.",
+                  "link": "https://esm.sh/"
                 }
               ]
             }
@@ -105,10 +135,10 @@
               "name": "PHP",
               "resources": [
                 {
-                  "id": "laravel-valet",
-                  "name": "Laravel Valet",
-                  "description": "Valet is a Laravel development environment for Mac minimalists. No Vagrant, no /etc/hosts file. You can even share your sites publicly using local tunnels.",
-                  "link": "https://laravel.com/docs/8.x/valet"
+                  "id": "laravel-docs",
+                  "name": "Laravel Docs",
+                  "description": "The official Laravel documentation for building modern PHP applications.",
+                  "link": "https://laravel.com/docs"
                 }
               ]
             }
@@ -127,46 +157,72 @@
               "name": "React",
               "resources": [
                 {
-                  "id": "astro",
-                  "name": "Astro",
-                  "description": "Astro powers the world's fastest websites, client-side web apps, dynamic API endpoints, and everything in-between.",
-                  "link": "https://astro.build/"
+                  "id": "react-docs",
+                  "name": "React Docs",
+                  "description": "The official React documentation for modern patterns, hooks, and component architecture.",
+                  "link": "https://react.dev/"
                 },
                 {
                   "id": "nextjs",
                   "name": "Next.js",
-                  "description": "Next.js gives you the best developer experience with all the features you need for production: hybrid static &amp; server rendering, TypeScript support, smart bundling, route pre-fetching, and more.",
+                  "description": "Next.js gives you the best developer experience with all the features you need for production: hybrid static & server rendering, TypeScript support, smart bundling, route pre-fetching, and more.",
                   "link": "https://nextjs.org/"
                 },
                 {
-                  "id": "react-stickynode",
-                  "name": "React Sticky Node",
-                  "description": "A performant and comprehensive React sticky component.",
-                  "link": "https://github.com/yahoo/react-stickynode#readme"
+                  "id": "remix",
+                  "name": "Remix",
+                  "description": "A full stack web framework focused on web fundamentals, speed, and resilient user experiences.",
+                  "link": "https://remix.run/"
                 },
                 {
-                  "id": "react-joyride",
-                  "name": "React Joyride",
-                  "description": "Create awesome tours for your app! Showcase your app to new users or explain functionality of new features.",
-                  "link": "https://github.com/gilbarbara/react-joyride"
+                  "id": "react-router",
+                  "name": "React Router",
+                  "description": "Declarative routing for React applications with modern data APIs and nested routing.",
+                  "link": "https://reactrouter.com/"
                 },
                 {
-                  "id": "react-query",
-                  "name": "React Query",
-                  "description": "Fetch, cache and update data in your React and React Native applications all without touching any 'global state'.",
-                  "link": "https://react-query.tanstack.com/"
+                  "id": "tanstack-query",
+                  "name": "TanStack Query",
+                  "description": "Powerful async state management, data fetching, caching, and synchronization for web apps.",
+                  "link": "https://tanstack.com/query/latest"
                 },
                 {
-                  "id": "react-html-parser",
-                  "name": "React HTML Parser",
-                  "description": "A utility for converting HTML strings into React components.",
-                  "link": "https://www.npmjs.com/package/react-html-parser"
+                  "id": "tanstack-router",
+                  "name": "TanStack Router",
+                  "description": "A fully type-safe router for React applications with modern routing ergonomics.",
+                  "link": "https://tanstack.com/router/latest"
                 },
                 {
-                  "id": "react-number-format",
-                  "name": "React Number Format",
-                  "description": "React component to format number in an input or as a text.",
-                  "link": "https://www.npmjs.com/package/react-number-format"
+                  "id": "shadcn-ui",
+                  "name": "shadcn/ui",
+                  "description": "A modern component system built from accessible primitives and tailored for real product work.",
+                  "link": "https://ui.shadcn.com/"
+                },
+                {
+                  "id": "radix-ui",
+                  "name": "Radix UI",
+                  "description": "Low-level accessible UI primitives for building high-quality design systems and applications.",
+                  "link": "https://www.radix-ui.com/"
+                }
+              ]
+            }
+          },
+          {
+            "category": {
+              "id": "astro-frameworks",
+              "name": "Astro",
+              "resources": [
+                {
+                  "id": "astro",
+                  "name": "Astro",
+                  "description": "Astro powers fast websites, content-rich apps, and modern full-stack experiences.",
+                  "link": "https://astro.build/"
+                },
+                {
+                  "id": "starlight",
+                  "name": "Starlight",
+                  "description": "Astro's documentation framework for building polished docs sites quickly.",
+                  "link": "https://starlight.astro.build/"
                 }
               ]
             }
@@ -177,10 +233,22 @@
               "name": "Vue.js",
               "resources": [
                 {
+                  "id": "vuejs-docs",
+                  "name": "Vue",
+                  "description": "The progressive JavaScript framework for building user interfaces and single-page applications.",
+                  "link": "https://vuejs.org/"
+                },
+                {
                   "id": "nuxtjs",
                   "name": "NuxtJS",
                   "description": "Build your next Vue.js application with confidence using NuxtJS. An open source framework making web development simple and powerful.",
-                  "link": "https://nuxtjs.org/"
+                  "link": "https://nuxt.com/"
+                },
+                {
+                  "id": "pinia",
+                  "name": "Pinia",
+                  "description": "The intuitive state management library for Vue applications.",
+                  "link": "https://pinia.vuejs.org/"
                 }
               ]
             }
@@ -198,9 +266,15 @@
                 },
                 {
                   "id": "svelte-kit",
-                  "name": "Svelte Kit",
+                  "name": "SvelteKit",
                   "description": "SvelteKit is a framework for building web applications of all sizes, with a beautiful development experience and flexible filesystem-based routing.",
                   "link": "https://kit.svelte.dev/"
+                },
+                {
+                  "id": "svelte-society",
+                  "name": "Svelte Society",
+                  "description": "A community hub for the Svelte ecosystem, events, and ecosystem resources.",
+                  "link": "https://www.sveltesociety.dev/"
                 }
               ]
             }
@@ -213,26 +287,100 @@
                 {
                   "id": "advanced-custom-fields",
                   "name": "Advanced Custom Fields",
-                  "description": "Use the Advanced Custom Fields plugin to take full control of your WordPress edit screens &amp; custom field data.",
+                  "description": "Use the Advanced Custom Fields plugin to take full control of your WordPress edit screens & custom field data.",
                   "link": "https://www.advancedcustomfields.com/"
-                },
-                {
-                  "id": "underscores",
-                  "name": "Underscores",
-                  "description": "Underscores is a starter theme designed to cut down many hours of development time when setting up a new custom theme.",
-                  "link": "https://underscores.me/"
-                },
-                {
-                  "id": "wordmove",
-                  "name": "Wordmove",
-                  "description": "Wordmove is a command line tool that lets you automatically mirror local WordPress installations and DB data back and forth from your local development machine to one or more remote servers.",
-                  "link": "https://github.com/welaika/wordmove"
                 },
                 {
                   "id": "wpgraphql",
                   "name": "WPGraphQL",
                   "description": "WPGraphQL is a free, open-source WordPress plugin that provides an extendable GraphQL schema and API for any WordPress site.",
                   "link": "https://www.wpgraphql.com/"
+                },
+                {
+                  "id": "roots-sage",
+                  "name": "Roots Sage",
+                  "description": "A modern WordPress starter theme with a contemporary frontend workflow.",
+                  "link": "https://roots.io/sage/"
+                }
+              ]
+            }
+          },
+          {
+            "category": {
+              "id": "ai",
+              "name": "AI",
+              "resources": [
+                {
+                  "id": "openai-dev-docs",
+                  "name": "OpenAI Developer Docs",
+                  "description": "Official docs for building with OpenAI models, tools, and APIs.",
+                  "link": "https://platform.openai.com/docs/overview"
+                },
+                {
+                  "id": "anthropic-learn",
+                  "name": "Anthropic Learn",
+                  "description": "Claude-focused learning resources and guidance from Anthropic.",
+                  "link": "https://www.anthropic.com/learn"
+                },
+                {
+                  "id": "gemini-api-docs",
+                  "name": "Gemini API Docs",
+                  "description": "Google's API docs for building with Gemini models.",
+                  "link": "https://ai.google.dev/gemini-api/docs"
+                },
+                {
+                  "id": "hugging-face-learn",
+                  "name": "Hugging Face Learn",
+                  "description": "A broad hub for model, NLP, and AI learning resources.",
+                  "link": "https://huggingface.co/learn"
+                },
+                {
+                  "id": "langchain-docs",
+                  "name": "LangChain Docs",
+                  "description": "Documentation for building LLM-powered applications, tools, and agents.",
+                  "link": "https://python.langchain.com/docs/introduction/"
+                },
+                {
+                  "id": "langgraph-docs",
+                  "name": "LangGraph",
+                  "description": "Build controllable, stateful AI agent workflows on top of LangChain concepts.",
+                  "link": "https://langchain-ai.github.io/langgraph/"
+                },
+                {
+                  "id": "llamaindex-docs",
+                  "name": "LlamaIndex Docs",
+                  "description": "Framework docs for retrieval, indexing, and data-connected LLM applications.",
+                  "link": "https://docs.llamaindex.ai/"
+                },
+                {
+                  "id": "vercel-ai-sdk",
+                  "name": "Vercel AI SDK",
+                  "description": "SDK docs for building streaming AI interfaces and integrations in modern web apps.",
+                  "link": "https://sdk.vercel.ai/docs"
+                },
+                {
+                  "id": "mcp",
+                  "name": "Model Context Protocol",
+                  "description": "The open protocol for connecting models with tools, files, and external systems.",
+                  "link": "https://modelcontextprotocol.io/introduction"
+                },
+                {
+                  "id": "ollama",
+                  "name": "Ollama",
+                  "description": "Run and manage local models with a clean developer workflow.",
+                  "link": "https://ollama.com/"
+                },
+                {
+                  "id": "lm-studio",
+                  "name": "LM Studio",
+                  "description": "A desktop tool for exploring and running local models.",
+                  "link": "https://lmstudio.ai/"
+                },
+                {
+                  "id": "openrouter",
+                  "name": "OpenRouter",
+                  "description": "A unified API layer for accessing many AI models through one interface.",
+                  "link": "https://openrouter.ai/"
                 }
               ]
             }
@@ -247,20 +395,190 @@
         "categories": [
           {
             "category": {
-              "id": "vite",
-              "name": "Vite",
+              "id": "tooling",
+              "name": "Tooling, QA & Deploy",
               "resources": [
                 {
                   "id": "vitejs",
                   "name": "Vite",
-                  "description": "Next Generation Frontend Tooling",
+                  "description": "Next Generation Frontend Tooling.",
                   "link": "https://vitejs.dev/"
                 },
                 {
                   "id": "vite-react",
                   "name": "@vitejs/plugin-react",
-                  "description": "Provides all-in-one React Support.",
+                  "description": "Provides all-in-one React support.",
                   "link": "https://github.com/vitejs/vite/tree/main/packages/plugin-react"
+                },
+                {
+                  "id": "bun",
+                  "name": "Bun",
+                  "description": "A fast all-in-one JavaScript runtime, package manager, bundler, and test runner.",
+                  "link": "https://bun.sh/"
+                },
+                {
+                  "id": "biome",
+                  "name": "Biome",
+                  "description": "A fast formatter and linter for web projects.",
+                  "link": "https://biomejs.dev/"
+                },
+                {
+                  "id": "eslint",
+                  "name": "ESLint",
+                  "description": "A pluggable linter for identifying and fixing problems in JavaScript and TypeScript code.",
+                  "link": "https://eslint.org/"
+                },
+                {
+                  "id": "prettier",
+                  "name": "Prettier",
+                  "description": "An opinionated code formatter for consistent output across many file types.",
+                  "link": "https://prettier.io/"
+                },
+                {
+                  "id": "vitest",
+                  "name": "Vitest",
+                  "description": "A blazing fast unit test framework powered by Vite.",
+                  "link": "https://vitest.dev/"
+                },
+                {
+                  "id": "playwright",
+                  "name": "Playwright",
+                  "description": "Reliable end-to-end testing and browser automation across Chromium, Firefox, and WebKit.",
+                  "link": "https://playwright.dev/"
+                },
+                {
+                  "id": "storybook",
+                  "name": "Storybook",
+                  "description": "A frontend workshop for building UI components and pages in isolation.",
+                  "link": "https://storybook.js.org/"
+                },
+                {
+                  "id": "docker",
+                  "name": "Docker",
+                  "description": "Package, ship, and run applications in portable containers.",
+                  "link": "https://www.docker.com/"
+                },
+                {
+                  "id": "github-actions",
+                  "name": "GitHub Actions",
+                  "description": "Automate testing, CI/CD, and workflow orchestration directly in GitHub.",
+                  "link": "https://github.com/features/actions"
+                },
+                {
+                  "id": "netlify",
+                  "name": "Netlify",
+                  "description": "Deploy and host frontend projects with a strong workflow for static and hybrid sites.",
+                  "link": "https://www.netlify.com/"
+                },
+                {
+                  "id": "vercel",
+                  "name": "Vercel",
+                  "description": "A deployment platform built for frontend frameworks, edge functions, and fast iteration.",
+                  "link": "https://vercel.com/"
+                },
+                {
+                  "id": "cloudflare",
+                  "name": "Cloudflare",
+                  "description": "A broad platform for CDN, DNS, security, edge functions, and performance tooling.",
+                  "link": "https://www.cloudflare.com/"
+                },
+                {
+                  "id": "render",
+                  "name": "Render",
+                  "description": "A modern hosting platform for web services, static sites, databases, and cron jobs.",
+                  "link": "https://render.com/"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": {
+        "id": "backend-data",
+        "name": "Backend & Data",
+        "categories": [
+          {
+            "category": {
+              "id": "databases",
+              "name": "Databases & ORM",
+              "resources": [
+                {
+                  "id": "postgresql",
+                  "name": "PostgreSQL",
+                  "description": "A powerful open source relational database used across modern application stacks.",
+                  "link": "https://www.postgresql.org/"
+                },
+                {
+                  "id": "prisma",
+                  "name": "Prisma",
+                  "description": "A modern ORM and toolkit for type-safe database access in JavaScript and TypeScript.",
+                  "link": "https://www.prisma.io/"
+                },
+                {
+                  "id": "drizzle",
+                  "name": "Drizzle ORM",
+                  "description": "A lightweight TypeScript ORM with SQL-like ergonomics and strong type safety.",
+                  "link": "https://orm.drizzle.team/"
+                },
+                {
+                  "id": "supabase",
+                  "name": "Supabase",
+                  "description": "An open source backend platform with database, auth, storage, and realtime features.",
+                  "link": "https://supabase.com/"
+                }
+              ]
+            }
+          },
+          {
+            "category": {
+              "id": "authentication",
+              "name": "Authentication",
+              "resources": [
+                {
+                  "id": "authjs",
+                  "name": "Auth.js",
+                  "description": "Authentication for the web with support across modern JavaScript frameworks.",
+                  "link": "https://authjs.dev/"
+                },
+                {
+                  "id": "clerk",
+                  "name": "Clerk",
+                  "description": "Developer-focused authentication, user management, and session handling.",
+                  "link": "https://clerk.com/"
+                },
+                {
+                  "id": "better-auth",
+                  "name": "Better Auth",
+                  "description": "A modern auth solution for JavaScript apps with a strong developer experience.",
+                  "link": "https://www.better-auth.com/"
+                }
+              ]
+            }
+          },
+          {
+            "category": {
+              "id": "apis",
+              "name": "APIs",
+              "resources": [
+                {
+                  "id": "trpc",
+                  "name": "tRPC",
+                  "description": "End-to-end typesafe APIs for TypeScript applications.",
+                  "link": "https://trpc.io/"
+                },
+                {
+                  "id": "graphql",
+                  "name": "GraphQL",
+                  "description": "A query language and runtime for APIs that gives clients flexible access to data.",
+                  "link": "https://graphql.org/"
+                },
+                {
+                  "id": "microsoft-rest-api-guidelines",
+                  "name": "Microsoft REST API Guidelines",
+                  "description": "A practical reference for designing consistent and useful REST APIs.",
+                  "link": "https://github.com/microsoft/api-guidelines/blob/vNext/Guidelines.md"
                 }
               ]
             }
@@ -287,8 +605,20 @@
                 {
                   "id": "uidev",
                   "name": "ui.dev",
-                  "description": "Master the JavaScript Ecosystem",
+                  "description": "Master the JavaScript Ecosystem.",
                   "link": "https://ui.dev/"
+                },
+                {
+                  "id": "frontend-fyi-blog",
+                  "name": "Frontend FYI",
+                  "description": "A helpful stream of modern frontend tools, articles, and ecosystem references.",
+                  "link": "https://frontendfyi.com/"
+                },
+                {
+                  "id": "fireship",
+                  "name": "Fireship",
+                  "description": "High-signal videos and explainers on modern web, backend, and tooling topics.",
+                  "link": "https://fireship.io/"
                 }
               ]
             }
@@ -309,6 +639,72 @@
                   "name": "Open Source Society University Computer Science Curriculum",
                   "description": "The OSSU curriculum is a free and complete education in computer science using online materials.",
                   "link": "https://github.com/ossu/computer-science#contents"
+                },
+                {
+                  "id": "teach-yourself-cs",
+                  "name": "Teach Yourself Computer Science",
+                  "description": "A respected self-guided CS curriculum that focuses on core fundamentals, not shallow trends.",
+                  "link": "https://teachyourselfcs.com/"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": {
+        "id": "accessibility-performance",
+        "name": "Accessibility & Performance",
+        "categories": [
+          {
+            "category": {
+              "id": "accessibility",
+              "name": "Accessibility",
+              "resources": [
+                {
+                  "id": "a11y-project",
+                  "name": "The A11Y Project",
+                  "description": "A community-driven effort to make digital accessibility easier to understand and implement.",
+                  "link": "https://www.a11yproject.com/"
+                },
+                {
+                  "id": "webaim",
+                  "name": "WebAIM",
+                  "description": "Articles, training, and tools for accessible web design.",
+                  "link": "https://webaim.org/"
+                },
+                {
+                  "id": "axe",
+                  "name": "axe",
+                  "description": "Accessibility testing tools and guidance from Deque.",
+                  "link": "https://www.deque.com/axe/"
+                }
+              ]
+            }
+          },
+          {
+            "category": {
+              "id": "performance",
+              "name": "Performance",
+              "resources": [
+                {
+                  "id": "pagespeed-insights",
+                  "name": "PageSpeed Insights",
+                  "description": "Analyze page performance and get practical improvement recommendations.",
+                  "link": "https://pagespeed.web.dev/"
+                },
+                {
+                  "id": "lighthouse",
+                  "name": "Lighthouse",
+                  "description": "An open-source tool for auditing performance, accessibility, SEO, and best practices.",
+                  "link": "https://developer.chrome.com/docs/lighthouse/overview"
+                },
+                {
+                  "id": "webpagetest",
+                  "name": "WebPageTest",
+                  "description": "Deep performance testing and waterfall analysis for real-world web experiences.",
+                  "link": "https://www.webpagetest.org/"
                 }
               ]
             }
@@ -355,6 +751,12 @@
                   "name": "BGJar",
                   "description": "Free svg background generator for your websites, blogs and app.",
                   "link": "https://bgjar.com/"
+                },
+                {
+                  "id": "rayso",
+                  "name": "ray.so",
+                  "description": "Create beautiful code screenshots for sharing snippets and ideas.",
+                  "link": "https://ray.so/"
                 }
               ]
             }
@@ -366,9 +768,33 @@
               "resources": [
                 {
                   "id": "typescale",
-                  "name": "Type Scale",
+                  "name": "Typescale",
                   "description": "Preview and choose the right type scale for your project. Experiment with font size, scale and different webfonts.",
                   "link": "https://type-scale.com/"
+                },
+                {
+                  "id": "fontsource",
+                  "name": "Fontsource",
+                  "description": "Self-host open source fonts in your projects with a clean package-based workflow.",
+                  "link": "https://fontsource.org/"
+                },
+                {
+                  "id": "google-fonts",
+                  "name": "Google Fonts",
+                  "description": "A broad collection of free web fonts for prototyping and production use.",
+                  "link": "https://fonts.google.com/"
+                },
+                {
+                  "id": "fontshare",
+                  "name": "Fontshare",
+                  "description": "A free font service with a curated set of high-quality typefaces.",
+                  "link": "https://www.fontshare.com/"
+                },
+                {
+                  "id": "typewolf",
+                  "name": "Typewolf",
+                  "description": "Typography inspiration, font recommendations, and practical guidance for better type choices.",
+                  "link": "https://www.typewolf.com/"
                 }
               ]
             }
@@ -387,8 +813,14 @@
                 {
                   "id": "traversy-media",
                   "name": "Traversy Media",
-                  "description": "Traversy Media features web development and programming tutorials for web technologies including Node.js, Angular 2, React.js, PHP, Rails, HTML, CSS and more.",
+                  "description": "Traversy Media features web development and programming tutorials for web technologies including Node.js, Angular, React.js, PHP, Rails, HTML, CSS and more.",
                   "link": "https://www.youtube.com/user/TechGuyWeb"
+                },
+                {
+                  "id": "fireship-youtube",
+                  "name": "Fireship",
+                  "description": "Fast, high-signal videos on modern development tools and frameworks.",
+                  "link": "https://www.youtube.com/@Fireship"
                 }
               ]
             }
@@ -403,20 +835,32 @@
                   "name": "Syntax",
                   "description": "A Tasty Treats Podcast for Web Developers.",
                   "link": "https://syntax.fm/"
+                },
+                {
+                  "id": "shop-talk",
+                  "name": "ShopTalk",
+                  "description": "A long-running web design and frontend development podcast.",
+                  "link": "https://shoptalkshow.com/"
                 }
               ]
             }
           },
           {
             "category": {
-              "id": "misc",
-              "name": "Miscellaneous",
+              "id": "developer-utilities",
+              "name": "Developer Utilities",
               "resources": [
                 {
                   "id": "dracula",
                   "name": "Dracula Theme",
                   "description": "A dark theme for hundreds of applications.",
                   "link": "https://draculatheme.com/"
+                },
+                {
+                  "id": "excalidraw",
+                  "name": "Excalidraw",
+                  "description": "A simple but powerful whiteboard for diagrams, flows, and technical thinking.",
+                  "link": "https://excalidraw.com/"
                 }
               ]
             }
