@@ -1,0 +1,19 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Sidebar from '../components/Sidebar/Sidebar.component.astro';
+import DataList from '../components/DataList/DataList.component.astro';
+import PageTitle from '../components/PageTitle/PageTitle.component.astro';
+import learningData from '../data/learning.json';
+
+const { learning } = learningData;
+const title = 'Learning';
+const description = 'From the basics to advanced concepts, a collection of links to various knowledge articles.';
+---
+
+<Layout title={title} description={description}>
+  <PageTitle title={title} description={description} />
+  <div class="wrapper">
+    <Sidebar data={learning} page="learning" />
+    <DataList data={learning} />
+  </div>
+</Layout>

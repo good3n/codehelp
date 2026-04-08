@@ -1,0 +1,56 @@
+---
+import { Image } from 'astro:assets';
+import Layout from '../layouts/Layout.astro';
+import robotImage from '../assets/images/codehelp-robot.png';
+
+const title = 'CodeHelp Community and Discord Server';
+const description = 'CodeHelp is community-driven Discord server, comprised of developers, designers, and marketers of all skill levels.';
+---
+
+<Layout title={title} description={description}>
+  <div class="home-page">
+    <div>
+      <h1>code<span>/</span><span>help</span></h1>
+      <Image
+        src={robotImage}
+        alt="CodeHelp Robot"
+        width={100}
+        loading="eager"
+      />
+    </div>
+    <p>
+      CodeHelp is community-driven Discord server, comprised of developers,
+      designers, and marketers of all skill levels. Our goal is to create a
+      fun, helpful group where people can get the development and programming
+      support they need.
+    </p>
+    <a
+      class="button"
+      href="https://discord.gg/KntFa9p"
+      rel="noreferrer noopener"
+      target="_blank"
+      title="Join CodeHelp Discord!"
+      data-analytics="discord-home"
+    >
+      <span>
+        <img alt="Discord Icon" src="/images/icon-discord.svg" />
+        Join CodeHelp
+      </span>
+    </a>
+  </div>
+</Layout>
+
+
+<script>
+  // track discord link clicks
+  document.querySelectorAll('[data-analytics="discord-home"]').forEach(el => {
+    el.addEventListener('click', () => {
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'click', {
+          event_category: 'Discord Link',
+          event_label: 'Home'
+        });
+      }
+    });
+  });
+</script>

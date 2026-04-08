@@ -5,58 +5,41 @@
   "version": "1.0.0",
   "author": "Tom Gooden @good3n",
   "dependencies": {
-    "babel-plugin-styled-components": "^2.0.2",
-    "dotenv": "^14.1.0",
-    "gatsby": "^4.5.2",
-    "gatsby-plugin-anchor-links": "^1.2.1",
-    "gatsby-plugin-google-analytics": "^4.5.0",
-    "gatsby-plugin-image": "^2.5.1",
-    "gatsby-plugin-manifest": "^4.5.1",
-    "gatsby-plugin-offline": "^5.5.2",
-    "gatsby-plugin-react-helmet": "^5.5.0",
-    "gatsby-plugin-sharp": "^4.5.1",
-    "gatsby-plugin-styled-components": "^5.5.0",
-    "gatsby-source-filesystem": "^4.5.1",
-    "gatsby-transformer-sharp": "^4.5.0",
-    "prop-types": "^15.8.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-helmet": "^6.1.0",
-    "react-is": "^17.0.2",
-    "reactjs-popup": "^2.0.5",
-    "styled-components": "^5.3.3"
+    "@astrojs/partytown": "^2.1.0",
+    "@astrojs/react": "^3.1.0",
+    "@astrojs/sitemap": "^3.1.0",
+    "@nanostores/react": "^0.7.0",
+    "astro": "^5.0.0",
+    "dotenv": "^16.3.1",
+    "nanostores": "^0.9.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sharp": "^0.34.5"
   },
   "devDependencies": {
-    "@netlify/plugin-gatsby": "^1.0.3",
-    "babel-eslint": "^10.1.0",
-    "babel-preset-gatsby": "^2.5.2",
-    "eslint": "^7.32.0",
-    "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-import": "^2.25.4",
-    "eslint-plugin-jsx-a11y": "^6.5.1",
-    "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-react": "^7.28.0",
-    "prettier": "2.5.1"
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "eslint": "^8.0.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "prettier": "^3.0.0"
   },
   "keywords": [
-    "gatsby"
+    "astro"
   ],
   "license": "0BSD",
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "clean": "rm -rf dist .astro"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/good3n/codehelp"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/good3n/codehelp/issues"
   }
 }

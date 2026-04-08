@@ -1,0 +1,19 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Sidebar from '../components/Sidebar/Sidebar.component.astro';
+import DataList from '../components/DataList/DataList.component.astro';
+import PageTitle from '../components/PageTitle/PageTitle.component.astro';
+import resourcesData from '../data/resources.json';
+
+const { resources } = resourcesData;
+const title = 'Resources';
+const description = 'Links to tools, libraries, frameworks, and more to improve your development process.';
+---
+
+<Layout title={title} description={description}>
+  <PageTitle title={title} description={description} />
+  <div class="wrapper">
+    <Sidebar data={resources} page="resources" />
+    <DataList data={resources} />
+  </div>
+</Layout>

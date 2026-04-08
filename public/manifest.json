@@ -1,0 +1,17 @@
+{
+  "name": "CodeHelp",
+  "short_name": "CodeHelp",
+  "start_url": "/",
+  "background_color": "#37393E",
+  "theme_color": "#5E7CE7",
+  "display": "standalone",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/images/icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "dev",
+      "runtimeExecutable": "/Users/tom/.nvm/versions/node/v24.13.0/bin/node",
+      "runtimeArgs": ["node_modules/.bin/astro", "dev"],
+      "port": 4321
+    },
+    {
+      "name": "preview",
+      "runtimeExecutable": "/Users/tom/.nvm/versions/node/v24.13.0/bin/node",
+      "runtimeArgs": ["node_modules/.bin/astro", "preview"],
+      "port": 4321
+    }
+  ]
+}

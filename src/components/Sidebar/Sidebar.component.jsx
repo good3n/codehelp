@@ -1,0 +1,42 @@
+import React from 'react'
+import PropTypes from 'prop-types'
+import { StyledSidebar } from './Sidebar.styles'
+
+const Sidebar = ({ data, page }) => (
+  <div>
+    <StyledSidebar>
+      {data.map(
+        ({
+          label: { id: labelId, name: labelName, categories: labelCategories },
+        }) => {
+          return (
+            <div key={labelId}>
+              <h2 key={labelId}>{labelName}</h2>
+              <ul>
+                {labelCategories.map(
+                  ({ category: { id: categoryId, name: categoryName } }) => (
+                    <li key={categoryId}>
+                      <a
+                        title={categoryName}
+                        href={`#${categoryId}`}
+                      >
+                        {categoryName}
+                      </a>
+                    </li>
+                  )
+                )}
+              </ul>
+            </div>
+          )
+        }
+      )}
+    </StyledSidebar>
+  </div>
+)
+
+Sidebar.propTypes = {
+  data: PropTypes.array.isRequired,
+  page: PropTypes.string.isRequired,
+}
+
+export default Sidebar

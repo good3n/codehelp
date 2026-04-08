@@ -1,0 +1,124 @@
+---
+interface Props {
+  data: any[]
+  page: string
+}
+
+const { data, page } = Astro.props
+---
+
+<aside class="sidebar">
+  <details class="sidebar__details" open>
+    <summary>Categories</summary>
+    <div class="sidebar__content">
+      {data.map(({ label: { id: labelId, name: labelName, categories: labelCategories } }) => (
+        <div>
+          <h2>{labelName}</h2>
+          <ul>
+            {labelCategories.map(({ category: { id: categoryId, name: categoryName } }) => (
+              <li>
+                <a title={categoryName} href={`#${categoryId}`}>
+                  {categoryName}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </details>
+</aside>
+
+<script is:inline>
+  // collapse sidebar on mobile
+  if (window.innerWidth <= 991) {
+    document.querySelectorAll('.sidebar__details').forEach(d => d.removeAttribute('open'));
+  }
+</script>
+
+<style is:global>
+  .sidebar {
+    border: 2px solid var(--color__border);
+    padding: 3rem 30px;
+    border-radius: 10px;
+    align-self: start;
+  }
+
+  [data-theme="light"] .sidebar {
+    background-color: var(--color__gray);
+  }
+
+  [data-theme="dark"] .sidebar {
+    background-color: transparent;
+  }
+
+  .sidebar summary {
+    display: none;
+  }
+
+  @media (max-width: 991px) {
+    .sidebar {
+      padding: 0;
+    }
+
+    .sidebar summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.25rem 30px;
+      font-weight: 700;
+      cursor: pointer;
+      list-style: none;
+    }
+
+    .sidebar summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .sidebar summary::after {
+      content: '+';
+      font-size: var(--font-size__h4);
+      line-height: 1;
+    }
+
+    .sidebar details[open] summary::after {
+      content: '−';
+    }
+
+    .sidebar__content {
+      padding: 0 30px 1.5rem;
+    }
+  }
+
+  .sidebar h2 {
+    font-weight: 600;
+    margin: 0;
+    font-size: var(--font-size__base);
+  }
+
+  .sidebar ul {
+    margin: 1rem 0 3rem;
+    padding: 0;
+  }
+
+  .sidebar li {
+    display: block;
+    margin: 0 0 0.64rem;
+  }
+
+  .sidebar a:hover {
+    text-decoration: underline;
+  }
+
+  [data-theme="dark"] .sidebar a {
+    color: var(--color__green);
+  }
+
+  [data-theme="light"] .sidebar a {
+    color: var(--color__text);
+  }
+
+  .sidebar > details > .sidebar__content > div:last-of-type ul {
+    margin-bottom: 0;
+  }
+</style>

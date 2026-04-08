@@ -1,0 +1,71 @@
+---
+import Resource from '../Resource/Resource.component.astro'
+
+interface Props {
+  data: any[]
+}
+
+const { data } = Astro.props
+---
+
+<div class="data-list">
+  {data.map(({ label: { id, name, categories } }) => (
+    <div class="label" key={id}>
+      <h2>{name}</h2>
+      {categories.map(({ category }) => (
+        <div id={category.id} key={category.id}>
+          <h3>
+            <span>#</span>
+            {category.name}
+          </h3>
+          {category.resources.map(resource => (
+            <Resource
+              desc={resource.description}
+              link={resource.link}
+              name={resource.name}
+            />
+          ))}
+        </div>
+      ))}
+    </div>
+  ))}
+</div>
+
+<style is:global>
+  .data-list .label:not(:first-of-type) {
+    margin-top: 4rem;
+  }
+
+  .data-list h2 {
+    margin: 0;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--color__border);
+    font-size: var(--font-size__h4);
+  }
+
+  .data-list h3 {
+    border-bottom: 3px dashed;
+    display: inline-block;
+    font-size: var(--font-size__h5);
+    padding-bottom: 5px;
+    margin: 2rem 0 1rem;
+  }
+
+  [data-theme="dark"] .data-list h3 {
+    border-color: var(--color__purple);
+  }
+
+  [data-theme="light"] .data-list h3 {
+    border-color: var(--color__green);
+  }
+
+  .data-list h3 span {
+    color: var(--color__purple);
+    display: inline-block;
+    margin-right: 5px;
+  }
+
+  .data-list p {
+    margin: 1rem 0 2rem;
+  }
+</style>

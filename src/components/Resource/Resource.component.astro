@@ -1,0 +1,43 @@
+---
+interface Props {
+  name: string
+  desc: string
+  link: string
+}
+
+const { name, desc, link } = Astro.props
+---
+
+<div class="resource">
+  <a class="resource__title" href={link} id={name} rel="nofollow noreferrer" target="_blank">
+    {name}
+  </a>
+  <p class="resource__desc">{desc}</p>
+</div>
+
+<style is:global>
+  .resource:not(:last-of-type) {
+    margin-bottom: var(--font-size__h2);
+  }
+
+  .resource__title {
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  [data-theme="dark"] .resource__title {
+    color: var(--color__green);
+  }
+
+  [data-theme="light"] .resource__title {
+    color: var(--color__purple);
+  }
+
+  .resource__title:hover {
+    text-decoration: underline;
+  }
+
+  .resource__desc {
+    color: var(--color__text);
+  }
+</style>
